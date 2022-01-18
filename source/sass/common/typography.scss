@@ -1,0 +1,26 @@
+.f-basicLight-Small,
+.f-basicLight-Middle,
+.f-basicLight-Big  {
+    font-weight: 300;
+    line-height:  0.32;
+}
+
+.f-basicLight-Small {
+    font-size: 1.6rem;
+
+    @media (min-width: $tb) {
+        
+    }
+
+    @media (min-width: $ds) {
+        
+    }
+}
+
+.f-basicLight-Middle {
+    font-size: 2rem;
+}
+
+.f-basicLight-Big {
+    font-size: 2rem;
+}
