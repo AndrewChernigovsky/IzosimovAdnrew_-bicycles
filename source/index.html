@@ -62,16 +62,18 @@
 
       <div class="callToAction-sectionForm">
         <form class="Mainform-calltoAction" action="" method="get" id="Mainform-calltoAction">
-          <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <p class="f-basicSemiBold mainForm-heading">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <div class="wrapperMainForm">
-            <label for="username"></label>
-            <input type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя">
-            <label for="phone"></label>
-            <input type="tel" name="phone" id="phone" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона">
-            <button type="submit">
-              <span>
-                Подобрать велосипед мечты
-              </span>
+            <div class="Mainform-calltoAction__username">
+              <label for="username"></label>
+              <input class="Mainform-calltoAction__input" type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя">
+            </div>
+            <div class="Mainform-calltoAction__phone">
+              <label for="phone"></label>
+              <input class="Mainform-calltoAction__input" type="tel" name="phone" id="phone" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона">
+            </div>
+            <button class="Mainform-calltoAction__btn" type="submit">
+             <span class="f-basicSemiBold-Small ">Подобрать велосипед мечты</span>
             </button>
           </div>
         </form>

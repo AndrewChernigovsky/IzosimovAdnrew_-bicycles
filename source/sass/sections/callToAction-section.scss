@@ -1,14 +1,52 @@
 .callToAction-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .Mainform-calltoAction {
     display: grid;
+
+    &__input{
+        padding: 0 30px;
+        height: 48px;
+        min-width: 100%;
+        border: 1px solid $basicGray8;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        padding-top: 7px;
+
+        &::placeholder{
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $basicGray2;
+        }
+    }
+
+    &__btn {
+        padding: 0 30px;
+        height: 52px;
+        border-radius: 6px;
+        background-color: $basicdecor;
+        border: none;
+    }
 }
 
 .wrapperMainForm {
     display: flex;
     flex-direction: column;
+}
+
+.callToAction-sectionForm {
+
+    @media (min-width: $ds) {
+        flex-basis: 38.5%;
+        padding-right: 52px;
+    }
+}
+
+.mainForm-heading {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 19px;
 }
