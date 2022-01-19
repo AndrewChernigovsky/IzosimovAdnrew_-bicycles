@@ -6,14 +6,10 @@
 }
 
 .f-basicLight-Small {
-    font-size: 1.6rem;
-
-    @media (min-width: $tb) {
-        
-    }
+    font-size: 1.8rem;
 
     @media (min-width: $ds) {
-        
+        font-size: 2rem;
     }
 }
 
@@ -23,4 +19,130 @@
 
 .f-basicLight-Big {
     font-size: 2rem;
+}
+
+.f-basicLight-menu {
+    font-size:  2rem;
+    font-weight: 400;
+    color:  $basicGray1;
+
+    @media (min-width: $tb) {
+        font-weight: 300;
+        font-size:  1.6rem;
+        color:  $white;
+    }
+}
+
+///regular
+.f-basicRegular,
+.f-basicRegular-Small {
+    font-weight: 400;
+    line-height: 0.24;
+}
+
+
+.f-basicRegular-Small {
+    font-size: 1.5rem;
+    color: $basicGray2;
+}
+
+.f-basicRegular-Small2 {
+    font-size: 1.7rem;
+    color: $basicGray6;
+    line-height: 0.31;
+
+    @media (min-width: $ds) {
+        color: $basicGray3;
+    }
+}
+
+.f-basicRegular-Small2 {
+    font-size: 1.6rem;
+    color: $basicGray3;
+}
+
+.f-basicRegular {
+    font-size: 1.8rem;
+    color: $black;
+
+    @media (min-width: $tb) {
+        font-size:  2.2rem;
+        line-height: 0.34;
+    }
+}
+
+///semibold
+.f-basicSemiBold,
+.f-basicSemiBold-Small ,
+.f-basicSemiBold-Small2,
+.f-basicSemiBold-Middle,
+.f-basicSemiBold-Middle2 {
+    font-weight:  600;
+    color: $black;
+    line-height: 0.21;
+}
+
+.f-basicSemiBold {
+    font-size:  1.8rem;
+    line-height: 0.28;
+
+    @media (min-width: $ds) {
+        font-size:  1.7rem;
+        color: $white;
+    }
+}
+
+.f-basicSemiBold-Small {
+    font-size:  1.5rem;
+}
+
+.f-basicSemiBold-Small2 {
+    font-size:  2.2rem;
+    line-height: 0.34;
+}
+
+.f-basicSemiBold-Middle {
+    font-size:  2.4rem;
+    line-height: 0.41;
+    color: $basicGray5;
+
+    @media (min-width: $ds) {
+        font-size:  3rem;
+        line-height: 0.3;
+    }
+}
+
+.f-basicSemiBold-Middle2 {
+    font-size:  2.4rem;
+    line-height: 0.3;
+    color: $white;
+
+    @media (min-width: $ds) {
+        font-size:  3rem;
+    }
+}
+
+
+////////bold
+
+.f-basicBold,
+.f-basicBold-Decoration  {
+    font-weight: 700;
+}
+
+.f-basicBold {
+    font-size:  3rem;
+    color: $white;
+    line-height: 0.42;
+
+    @media (min-width: $ds) {
+        font-size:  4.6rem;
+        line-height: 0.64;
+    }
+}
+
+.f-basicBold-Decoration {
+    font-size:  2.8rem;
+    color: $basicdecor;
+    line-height: 0.38;
 }
