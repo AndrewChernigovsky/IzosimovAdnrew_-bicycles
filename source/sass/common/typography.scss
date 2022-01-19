@@ -2,11 +2,12 @@
 .f-basicLight-Middle,
 .f-basicLight-Big  {
     font-weight: 300;
-    line-height:  0.32;
+    line-height:  1.32;
 }
 
 .f-basicLight-Small {
     font-size: 1.8rem;
+    color: $white;
 
     @media (min-width: $ds) {
         font-size: 2rem;
@@ -26,7 +27,7 @@
     font-weight: 400;
     color:  $basicGray1;
 
-    @media (min-width: $tb) {
+    @media (min-width: $ds) {
         font-weight: 300;
         font-size:  1.6rem;
         color:  $white;
@@ -133,11 +134,11 @@
 .f-basicBold {
     font-size:  3rem;
     color: $white;
-    line-height: 0.42;
+    line-height: 1.42;
 
     @media (min-width: $ds) {
         font-size:  4.6rem;
-        line-height: 0.64;
+        line-height: 1.64;
     }
 }
 

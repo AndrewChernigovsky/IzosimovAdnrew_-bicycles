@@ -1,13 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="Mainpage-bike" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="../fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+
+<body class="Mainpage-bike__body">
+  <header class="main-header">
+    <div class="main-header__wrapper">
+      <div class="main-header__inner container">
+        <div class="logo">
+          <a class="logo__link" href="#no__scroll">
+            <svg role="img" class="logo" width="67" height="20" aria-label="logotype">
+              <use xlink:href="img/sprite.svg#Logotype"></use>
+            </svg>
+          </a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">О нас</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">Виды велосипедов</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">Видео про велосипеды</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="callToAction-section container">
+      <div class="present-company">
+        <div class="logo">
+          <a class="logo__link" href="#no__scroll">
+            <svg role="img" class="logo" width="67" height="20" aria-label="logotype">
+              <use xlink:href="img/sprite.svg#Logotype"></use>
+            </svg>
+          </a>
+        </div>
+        <h1 class="f-basicBold">Мы продаем
+          велосипеды</h1>
+        <p class="f-basicLight-Small ">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+
+      <div class="callToAction-sectionForm">
+        <form class="Mainform-calltoAction" action="" method="get" id="Mainform-calltoAction">
+          <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <div class="wrapperMainForm">
+            <label for="username"></label>
+            <input type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя">
+            <label for="phone"></label>
+            <input type="tel" name="phone" id="phone" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона">
+            <button type="submit">
+              <span>
+                Подобрать велосипед мечты
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </header>
 </body>
+
 </html>

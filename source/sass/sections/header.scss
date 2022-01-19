@@ -1,0 +1,20 @@
+.main-header {
+    min-height:  390px;
+    background: $basicGray7  url("../../img/content/Main-bg_Bike.jpg") no-repeat top;
+    background-size: cover;
+    
+    @media (min-width: $tb) {
+        min-height:  340px;
+    }
+
+    @media (min-width: $ds) {
+        min-height:  825px;
+        max-height:  1020px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        min-height: 62px;
+    }
+}

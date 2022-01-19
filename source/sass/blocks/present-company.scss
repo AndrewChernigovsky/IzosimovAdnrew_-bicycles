@@ -1,0 +1,14 @@
+.present-company {
+
+    @media (min-width: $ds) {
+        flex-basis:  40%;
+    }
+
+    .logo {
+        display:  none;
+
+        @media (min-width: $ds) {
+            display: block;
+        }
+    }
+}

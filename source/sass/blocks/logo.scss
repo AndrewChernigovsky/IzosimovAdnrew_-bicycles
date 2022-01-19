@@ -1,0 +1,8 @@
+.logo {
+    width: 67px;
+    height: 20px;
+
+    @media (min-width: $ds) {
+        display:  none;
+    }
+}

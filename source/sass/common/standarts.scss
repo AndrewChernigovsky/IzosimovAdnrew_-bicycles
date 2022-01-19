@@ -2,9 +2,20 @@
     max-width: $ds;
     min-width: $sm;
     margin: 0 auto;
-    padding: 10px;
+    padding: 0 10px;
 
     @media (min-width: $tb) {
-        padding: 20px;
+        padding: 0 20px;
+    }
+}
+
+.Mainpage-bike {
+    font-size: 10px;
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+
+    &__body {
+        margin: 0;
+        font-family: "Open Sans", "Arial", sans-serif;
     }
 }
