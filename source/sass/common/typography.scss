@@ -8,9 +8,15 @@
 .f-basicLight-Small {
     font-size: 1.8rem;
     color: $white;
+    line-height:  1.72;
+
+    @media (min-width: $tb) {
+        line-height:  1.72;
+    }
 
     @media (min-width: $ds) {
         font-size: 2rem;
+        line-height:  1.52;
     }
 }
 
