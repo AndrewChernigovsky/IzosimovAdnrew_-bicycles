@@ -52,3 +52,20 @@ img {
         font-family: "Open Sans", "Arial", sans-serif;
     }
 }
+
+.error,.success {
+	font-size: 1.4rem;
+}
+
+.error {
+	border: 1px solid $red;
+}
+
+.success {
+	border: 1px solid $green;
+}
+
+.errorText {
+    color:  $red;
+    margin-top: -20px;
+}

@@ -1,0 +1,16 @@
+.Mainform-calltoAction {
+    &__username, &__phone {
+        position: relative;
+    }
+
+    &__input-star  {
+        position: absolute;
+        right: 0;
+        color: $red;
+        display: block;
+        top: 14px;
+        width: 14px;
+        height: 14px;
+        font-size: 1.4rem;
+    }
+}

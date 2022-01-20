@@ -70,6 +70,13 @@
         border: none;
         min-width: 286px;
         align-self: center;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $white;
+            background-color: aqua;
+            transition: 0.3s ease;
+        }
 
         @media (min-width: $tb) {
             min-width: 320px;

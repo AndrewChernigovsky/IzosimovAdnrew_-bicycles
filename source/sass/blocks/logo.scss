@@ -10,4 +10,12 @@
     @media (min-width: $ds) {
         display:  none;
     }
+
+    &__link {
+        cursor: pointer;
+    }
+}
+
+.logo-linkMain {
+    cursor: default;
 }

@@ -16,7 +16,7 @@
     <div class="main-header__wrapper">
       <div class="main-header__inner container">
         <div class="logo">
-          <a class="logo__link" href="#no__scroll">
+          <a class="logo__link logo-linkMain" href="#no__scroll">
             <svg role="img" class="logo" width="67" height="20" aria-label="logotype">
               <use xlink:href="img/sprite.svg#Logotype"></use>
             </svg>
@@ -49,7 +49,7 @@
     <div class="callToAction-section container">
       <div class="present-company">
         <div class="logo">
-          <a class="logo__link" href="#no__scroll">
+          <a class="logo__link logo-linkMain" href="#no__scroll">
             <svg role="img" class="logo" width="67" height="20" aria-label="logotype">
               <use xlink:href="img/sprite.svg#Logotype"></use>
             </svg>
@@ -61,18 +61,20 @@
       </div>
 
       <div class="callToAction-sectionForm">
-        <form class="Mainform-calltoAction" action="" method="get" id="Mainform-calltoAction">
+        <form class="Mainform-calltoAction" action="" method="get" id="mainForm">
           <p class="f-basicSemiBold mainForm-heading">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <div class="wrapperMainForm">
             <div class="Mainform-calltoAction__username">
               <label for="username"></label>
-              <input class="Mainform-calltoAction__input" type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя">
+              <input class="Mainform-calltoAction__input" type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя" required>
+              <sup class="Mainform-calltoAction__input-star">*</sup>
             </div>
             <div class="Mainform-calltoAction__phone">
               <label for="phone"></label>
-              <input class="Mainform-calltoAction__input" type="tel" name="phone" id="phone" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона">
+              <input class="Mainform-calltoAction__input" type="tel" name="phone" id="phone" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона" required>
+              <sup class="Mainform-calltoAction__input-star">*</sup>
             </div>
-            <button class="Mainform-calltoAction__btn" type="submit">
+            <button class="Mainform-calltoAction__btn" type="submit" id="mainFormSubmit">
              <span class="f-basicSemiBold-Small ">Подобрать велосипед мечты</span>
             </button>
           </div>
