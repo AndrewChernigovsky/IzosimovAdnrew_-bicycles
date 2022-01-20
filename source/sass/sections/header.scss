@@ -21,6 +21,7 @@
         display: flex;
         align-items: center;
         min-height: 70px;
+        justify-content: space-between;
 
         @media (min-width: $tb) {
             min-height: 70px;

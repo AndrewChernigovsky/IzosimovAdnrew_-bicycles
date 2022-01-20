@@ -2,9 +2,15 @@
     width: auto;
     position: relative;
     min-height: 50px;
+    top: -10px;
+    right: -10px;
+  
     @media (min-width: $tb){
       background-color: transparent;
       display: block;
+      right: -20px;
+      width: 50px;
+      height: 50px;
     }
   
     @media (min-width: $ds){
@@ -16,12 +22,12 @@
     }
 
     &__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        // margin: 0;
+        // padding: 0;
+        // list-style: none;
+        // display: flex;
+        // align-items: center;
+        // flex-direction: column;
 
         @media (min-width: $ds) {
             justify-content:  space-between;
@@ -38,11 +44,7 @@
         height: 50px;
         cursor: pointer;
         border: none;
-      
-        @media (min-width: $tb){
-          width: 72px;
-          height: 50px;
-        }
+        background-color: $basicdecor;
       
         @media (min-width: $ds){
           display: none;
@@ -90,11 +92,11 @@
     left: 8px;
     width: 36px;
     height: 2px;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 1), 0 16px 0 0 rgba(255, 255, 255, 1);
+    background-color: $black;
+    box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
   
     @media (min-width: $tb){
-      left: 17px;
+      left: 7px;
     }
   }
   .main-nav--closed .main-nav__toggle:active::before {
@@ -125,8 +127,18 @@
     right: 0;
     z-index: 10;
     min-height: 80vh;
-    min-width:  $sm;
+    min-width: 80vw;
     background-color: $white;
+
+    @media (min-width: $ds) {
+      position: static;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      min-height: 62px;
+      min-width: 100%;
+      background-color: transparent;
+    }
   }
   
   .main-nav--nojs .main-nav__toggle {
@@ -147,10 +159,6 @@
     top: 0;
     right: 6px;
     background-color: transparent;
-  
-    @media (min-width: $tb) {
-      width: 60px;
-    }
   }
   
   .main-nav--opened .main-nav__toggle::before,
@@ -158,9 +166,11 @@
     content: "";
     position: absolute;
     top: 24px;
-    left: 18px;
+    left: 7px;
     width: 36px;
     height: 2px;
+    background-color: $black;
+    opacity: .4;
   }
   .main-nav--opened .main-nav__toggle::before {
     transform: rotate(45deg);
@@ -175,34 +185,55 @@
   }
   
   .main-nav--opened .main-nav__list{
-    width: 320px;
+    min-width: 320px;
     display: grid;
     gap: 33px;
     padding-top: 133px;
     grid-auto-rows: min-content;
     height: min-content;
     padding-bottom: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    @media (min-width: $ds) {
+      padding-top: 0;
+      min-width: 100%;
+      display: flex;
+      box-shadow: none;
+    }
   }
   
   .main-nav--opened .main-nav__item{
     min-width: 320px;
+
+    @media (min-width: $ds) {
+      min-width: auto;
+    }
   }
   
   .main-nav--opened .main-nav__link{
     padding: 18px 0 18px 16px;
     width: inherit;
     position: relative;
+    background: $basicGray7;
+
+    @media (min-width: $ds) {
+      background: transparent;
+    }
   
     &::after{
       content: '';
       position: absolute;
-      top: 20px;
+      top: 23px;
       right: 24px;
       width: 9px;
-      height: 12.5px;
-      background-image: url("../image/icons/arrowRight.svg");
+      height: 13.5px;
+      background-image: url("../img/icons/arrow-next.svg");
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (min-width: $ds) {
+        display: none;
+      }
     }
   }
 
