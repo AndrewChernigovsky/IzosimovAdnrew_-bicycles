@@ -2,19 +2,32 @@
     min-height:  390px;
     background: $basicGray7  url("../../img/content/Main-bg_Bike.jpg") no-repeat top;
     background-size: cover;
+    position: relative;
     
     @media (min-width: $tb) {
         min-height:  340px;
+        background: $basicGray7  url("../../img/content/Main-bg_Bike.jpg") no-repeat center;
+        background-size: cover;
     }
 
     @media (min-width: $ds) {
         min-height:  825px;
         max-height:  1020px;
+        background: $basicGray7  url("../../img/content/Main-bg_Bike.jpg") no-repeat top;
+        background-size: cover;
     }
 
     &__inner {
         display: flex;
         align-items: center;
-        min-height: 62px;
+        min-height: 70px;
+
+        @media (min-width: $tb) {
+            min-height: 70px;
+        }
+
+        @media (min-width: $ds) {
+            min-height: 62px;
+        }
     }
 }
