@@ -45,6 +45,9 @@
         border-radius: 6px;
         margin-bottom: 20px;
         padding-top: 4px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: $basicGray2;
 
         @media (min-width: $tb) {
             min-width: 320px;
@@ -121,3 +124,10 @@
     }
 }
 
+.error {
+	border: 2px solid $red;
+}
+
+.success {
+	border: 2px solid $basicdecor;
+}
