@@ -14,21 +14,26 @@
         text-align: center;
         padding: 0 10px;
     
-        &:first-child {
+        &:nth-child(even) {
             margin-bottom: 8px;
         }
 
-        &:nth-child(even) {
-            margin-bottom: 26px;
+        &:nth-child(odd) {
+            margin-bottom: 8px;
+        }
+
+        &:last-child {
+            margin-top: 11px;
         }
     }
 
     &__item-count {
         margin-bottom: 35px;
 
-        &:nth-child(2n) {
-            margin-bottom: 18px;
+        &:nth-child(odd) {
+            margin-bottom: 35px;
         }
+
 
         &:last-child {
             margin-bottom: 27px;
