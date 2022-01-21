@@ -52,3 +52,11 @@ img {
         font-family: "Open Sans", "Arial", sans-serif;
     }
 }
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    opacity: .4;
+  }
+}
