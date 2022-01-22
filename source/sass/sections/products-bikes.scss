@@ -1,9 +1,67 @@
+.bike-products{
+  text-align: center;
+}
+
 .products-bikes {
     display:  flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.bike-itemPrev {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/decoration/Ellipse.svg');
+    width: 180px;
+    height: 180px;
+    top: 150px;
+    left: -65px;
+    z-index: -1;
+  }
+}
+
 .bike-itemMain {
-    align-self: end;
+  align-self: end;
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    z-index: 1;
+    background-image: url('../img/decoration/Rectangle.svg');
+  }
+
+  &::before {
+    top: -17px;
+    left: -18px;
+  }
+
+  &::after {
+    top: 538px;
+    left: 311px;
+  }
+}
+
+
+.bike-itemNext {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('../img/decoration/Ellipse.svg');
+    width: 95px;
+    height: 95px;
+    top: -47px;
+    left: 287px;
+    z-index: 1;
+  }
+}
+
+.bike-item {
+  display: grid;
+  justify-items: center;
 }
