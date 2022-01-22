@@ -102,11 +102,11 @@
         </div>
         <div class="facts__item">
           <p class="f-basicBold-Decoration facts__item-count">04</p>
-          <p class="f-basicRegular facts__item-text ">Профессиональные консультации!</p>
+          <p class="f-basicRegular facts__item-text">Профессиональные консультации!</p>
         </div>
       </div>
     </section>
-    <section class="bike-products containerBike">
+    <section class="bike-products containerBike none">
       <h2 class="f-basicSemiBold-Middle">Виды велосипедов</h2>
       <div class="products-bikes">
         <div class="bike-item bike-itemPrev">
@@ -140,11 +140,29 @@
 
     </section>
 
-    <section class="videoBike">
+    <section class="videoBike none">
       <div class="videoBike__wrapper container">
         <h2 class="f-basicSemiBold-Middle2">Видео про велосипеды</h2>
-        <p class="f-basicLight-menu">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <p class="f-basicLight-menu videoBike__subtitle">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       </div>
+
+      <div class="videoBike__video container">
+        <div class="videoBike__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/content/Video-Bike.webp 1x, img/content/Video-Bike@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/Video-Bike-tb.webp 1x, img/content/Video-Bike-tb@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/content/Video-Bike.webp 1x, img/content/Video-Bike@2x.webp 2x">
+            <img class="videoBike__image" srcset="img/content/Video-Bike.jpg" alt="Видео о велосипедах" loading="lazy" width="929" height="522">
+          </picture>
+          <button class="videoBike__btn" type="button">
+            <svg role="img" class="videoBike__btn-img" width="67" height="20" aria-label="play button">
+              <use xlink:href="img/sprite.svg#Play-Icon"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
     </section>
   </main>
 

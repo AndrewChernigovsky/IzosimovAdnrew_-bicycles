@@ -1,4 +1,43 @@
 .videoBike {
-  background: #000;
+  // background: linear-gradient(bottom, $basicGray9 75%, $bodybg 15%, $basicGray9 15%);
   min-height: 300px;
+
+  &__wrapper {
+    padding: 0 315px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  &__image-wrapper{
+    min-width: 100%;
+    position: relative;
+  }
+
+  &__image {
+    min-width: 100%;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    background-color: $basicdecor;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border: 1px solid $white;
+      background-color: aqua;
+      transition: 0.3s ease;
+    }
+  }
+  &__subtitle {
+    line-height: 1.56;
+  }
 }
