@@ -1,23 +1,23 @@
 .present-company {
-    text-align: center;
-    margin-bottom: 117px;
+  text-align: center;
+  margin-bottom: 117px;
 
-    @media (min-width: $tb) {
-      margin-bottom: 127px;
-    }
+  @media (min-width: $tb) {
+    margin-bottom: 127px;
+  }
+
+  @media (min-width: $ds) {
+    flex-basis: 42%;
+    padding-left: 52px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .logo {
+    display: none;
 
     @media (min-width: $ds) {
-        flex-basis: 42%;
-        padding-left: 52px;
-        margin-bottom: 0;
-        text-align: left;
+      display: block;
     }
-
-    .logo {
-        display:  none;
-
-        @media (min-width: $ds) {
-            display: block;
-        }
-    }
+  }
 }

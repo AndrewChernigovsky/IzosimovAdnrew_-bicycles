@@ -1,42 +1,43 @@
-.mainMap-image  {
-    flex: none;
-    object-fit: contain;
+.mainMap-image {
+  flex: none;
+  object-fit: contain;
+  min-width: 100%;
+  background-image: url("../../img/content/Map.jpg");
+
+  @media (min-width: $ds) {
+    min-height: 530px;
+  }
+
+  iframe {
     min-width: 100%;
-    background-image: url('../../img/content/Map.jpg');
-
-    @media (min-width: $ds) {
-        min-height: 530px;
-    }
-
-    iframe {
-        min-width: 100%;
-        min-height: inherit;
-    }
+    min-height: inherit;
+  }
 }
 
 .manFooter-heading {
-    text-align: center;
+  text-align: center;
 }
 
 .phone-icon {
-    fill: $white;
-    stroke: $basicdecor;
+  fill: $white;
+  stroke: $basicdecor;
 }
 
-.email-icon, 
+.email-icon,
 .phone-icon {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .contacts {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.email-link, .phone-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.email-link,
+.phone-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

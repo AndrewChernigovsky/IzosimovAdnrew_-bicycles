@@ -1,133 +1,133 @@
 .callToAction-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: absolute;
-    flex-wrap: wrap;
-    left:50%;
-    transform:translate(-50%, -50%);
-    top: 426px;
-    min-width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  flex-wrap: wrap;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 426px;
+  min-width: 70%;
+
+  @media (min-width: $tb) {
+    top: 399px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 58%;
+    text-align: center;
+  }
+
+  @media (min-width: $ds) {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: translate(0%, 0%);
+    text-align: left;
+  }
+
+  &__subtitle {
+    padding: 0 10px;
 
     @media (min-width: $tb) {
-        top: 399px;
-        left:50%;
-        transform:translate(-50%, -50%);
-        min-width: 58%;
-        text-align: center;
+      padding: 0;
     }
-
-    @media (min-width: $ds) {
-        position: static;
-        top: auto;
-        left: auto;
-        transform:translate(0%, 0%);
-        text-align: left;
-    }
-
-    &__subtitle {
-        padding: 0 10px;
-
-        @media (min-width: $tb) {
-            padding: 0;
-        }
-    }
+  }
 }
 
 .Mainform-calltoAction {
-    display: grid;
+  display: grid;
 
-    &__input{
-        padding: 0 20px;
-        height: 48px;
-        min-width: 286px;
-        border: 1px solid $basicGray8;
-        border-radius: 6px;
-        margin-bottom: 20px;
-        padding-top: 4px;
-        font-weight: 400;
-        font-size: 1.5rem;
-        color: $basicGray2;
+  &__input {
+    padding: 0 20px;
+    height: 48px;
+    min-width: 286px;
+    border: 1px solid $basicGray8;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding-top: 4px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $basicGray2;
 
-        @media (min-width: $tb) {
-            min-width: 320px;
-        }
-
-        @media (min-width: $ds) {
-            min-width: 327px;
-            padding: 6px 28px 0;
-        }
-
-        &::placeholder{
-            font-weight: 400;
-            font-size: 1.5rem;
-            color: $basicGray2;
-        }
+    @media (min-width: $tb) {
+      min-width: 320px;
     }
 
-    &__btn {
-        padding: 0 30px;
-        height: 52px;
-        border-radius: 6px;
-        background-color: $basicdecor;
-        border: none;
-        min-width: 286px;
-        align-self: center;
-        cursor: pointer;
-
-        &:hover {
-            border: 1px solid $white;
-            background-color: aqua;
-            transition: 0.3s ease;
-        }
-
-        @media (min-width: $tb) {
-            min-width: 320px;
-        }
-
-        @media (min-width: $ds) {
-            min-width: 327px;
-        }
+    @media (min-width: $ds) {
+      min-width: 327px;
+      padding: 6px 28px 0;
     }
 
-    &__username, &__phone {
-        align-self: center;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: $basicGray2;
     }
+  }
+
+  &__btn {
+    padding: 0 30px;
+    height: 52px;
+    border-radius: 6px;
+    background-color: $basicdecor;
+    border: none;
+    min-width: 286px;
+    align-self: center;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $white;
+      background-color: aqua;
+      transition: 0.3s ease;
+    }
+
+    @media (min-width: $tb) {
+      min-width: 320px;
+    }
+
+    @media (min-width: $ds) {
+      min-width: 327px;
+    }
+  }
+
+  &__username,
+  &__phone {
+    align-self: center;
+  }
 }
 
 .wrapperMainForm {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .callToAction-sectionForm {
-
-    @media (min-width: $ds) {
-        flex-basis: 38.5%;
-        padding-right: 52px;
-    }
+  @media (min-width: $ds) {
+    flex-basis: 38.5%;
+    padding-right: 52px;
+  }
 }
 
 .mainForm-heading {
-    text-align: center;
-    margin-top: 6px;
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tb) {
+    padding: 0 40px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $ds) {
+    padding: 0;
     margin-bottom: 19px;
-
-    @media (min-width: $tb) {
-        padding: 0 40px;
-        margin-bottom: 28px;
-    }
-
-    @media (min-width: $ds) {
-        padding: 0;
-        margin-bottom: 19px;
-    }
+  }
 }
 
 .error {
-	border: 2px solid $red;
+  border: 2px solid $red;
 }
 
 .success {
-	border: 2px solid $basicdecor;
+  border: 2px solid $basicdecor;
 }
