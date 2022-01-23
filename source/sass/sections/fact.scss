@@ -2,6 +2,8 @@
   display: grid;
   justify-items: center;
 
+  margin-bottom: 60px;
+
   &__items {
     display: flex;
     justify-content: flex-start;
@@ -59,5 +61,13 @@
     @media (min-width: $ds) {
       padding: 0 10px;
     }
+  }
+
+  @media (min-width: $tb) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $ds) {
+    margin-bottom: 127px;
   }
 }

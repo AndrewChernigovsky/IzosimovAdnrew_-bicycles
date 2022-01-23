@@ -4,9 +4,9 @@
   min-height: 50px;
   top: -10px;
   right: -10px;
+  background-color: transparent;
 
   @media (min-width: $tb) {
-    background-color: transparent;
     display: block;
     right: -20px;
     width: 50px;
@@ -14,8 +14,6 @@
   }
 
   @media (min-width: $ds) {
-    background-color: transparent;
-    display: block;
     min-height: 100px;
     flex-basis: 100%;
     margin-bottom: 219px;
@@ -28,6 +26,14 @@
 
     @media (min-width: $ds) {
       justify-content: space-between;
+
+      border-bottom: 1px solid $basicGray4;
+      margin: 0 -12px;
+      margin-right: 28px;
+      padding-left: 20px;
+      padding-right: 23px;
+      padding-bottom: 16px;
+
     }
   }
 
@@ -56,9 +62,7 @@
       width: 100%;
       max-width: 879px;
       margin: 0 auto;
-      padding: 27px 21px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid $basicGray4;
+      padding: 37px 0;
     }
   }
 
@@ -85,16 +89,12 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 15px;
-  left: 8px;
-  width: 36px;
+  top: 17px;
+  left: 13px;
+  width: 24px;
   height: 2px;
   background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
-
-  @media (min-width: $tb) {
-    left: 7px;
-  }
+  box-shadow: 0 8px 0 0 $black, 0 15px 0 0 $black;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
