@@ -20,6 +20,18 @@
   }
 }
 
+
+.containerMain {
+  max-width: $ds + 221px;
+  min-width: $sm;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media (min-width: $tb) {
+    padding: 0 20px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -66,6 +78,7 @@ input[type="radio"].visually-hidden {
 .link {
   text-decoration: none;
   cursor: pointer;
+
   &:hover {
     opacity: 0.4;
   }

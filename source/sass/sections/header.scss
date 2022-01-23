@@ -11,6 +11,7 @@
     background: $basicGray7 url("../../img/content/Main-bg_Bike.jpg") no-repeat
       center;
     background-size: cover;
+    margin-bottom: 398px;
   }
 
   @media (min-width: $ds) {
@@ -19,6 +20,7 @@
     background: $basicGray7 url("../../img/content/Main-bg_Bike.jpg") no-repeat
       top;
     background-size: cover;
+    margin-bottom: 122px;
   }
 
   &__inner {

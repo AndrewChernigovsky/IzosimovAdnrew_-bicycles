@@ -10,6 +10,7 @@
 
 .bike-itemPrev {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -49,6 +50,7 @@
 
 .bike-itemNext {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;

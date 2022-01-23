@@ -7,6 +7,10 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
+
+    @media (min-width: $tb) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -14,18 +18,46 @@
     text-align: center;
     padding: 0 10px;
     min-height: 157px;
+
+    @media (min-width: $tb) {
+      flex-basis: 39%;
+      margin: 0 4px;
+    }
+
+    @media (min-width: $ds) {
+      flex-basis: 24.3%;
+    }
   }
 
   &__item-count {
     margin-bottom: 30px;
 
-    &:last-child {
-      margin-top: 36px;
-      margin-bottom: 22px;
+    @media (min-width: $ds) {
+      margin-top: 33px;
+    }
+  }
+
+  &__item-countDown {
+    margin-top: 36px;
+    margin-bottom: 22px;
+
+    @media (min-width: $tb) {
+      margin-top: 31px;
+      margin-bottom: 28px;
     }
   }
 
   &__item-text {
     letter-spacing: -0.5px;
+
+    @media (min-width: $tb) {
+      line-height: 1.57;
+    }
+  }
+
+  &__item-textPadding {
+    @media (min-width: $ds) {
+      padding: 0 10px;
+    }
   }
 }
