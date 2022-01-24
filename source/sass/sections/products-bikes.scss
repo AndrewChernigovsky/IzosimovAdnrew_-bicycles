@@ -24,13 +24,9 @@
 
 .products-bikes {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-  @media (min-width: $tb) {
-    justify-content: center;
-  }
 
   @media (min-width: $ds) {
     align-items: flex-start;
@@ -59,15 +55,23 @@
     @media (min-width: $ds) {
       width: 180px;
       height: 180px;
-      top: 150px;
-      left: -65px;
+      top: 156px;
+      left: -38px;
     }
+  }
+
+  @media (min-width: $ds) {
+    margin-top: 10px;
   }
 }
 
 .bike-itemMain {
   align-self: end;
   position: relative;
+
+  @media (min-width: $ds) {
+    margin-top: 39px;
+  }
 
   &::before,
   &::after {
@@ -79,16 +83,30 @@
     background-image: url("../img/decoration/Rectangle.svg");
 
     display: none;
+
+    @media (min-width: $ds) {
+      display: block;
+    }
   }
 
   &::before {
     top: -17px;
     left: -18px;
+
+    @media (min-width: $ds) {
+      top: -18px;
+      left: 5px;
+    }
   }
 
   &::after {
     top: 538px;
     left: 311px;
+
+    @media (min-width: $ds) {
+      top: 542px;
+      left: 342px;
+    }
   }
 }
 
