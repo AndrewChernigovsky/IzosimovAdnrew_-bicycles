@@ -16,10 +16,17 @@
       font-size: 2.4rem;
       margin-bottom: 22px;
     }
+
+    @media (min-width: $ds) {
+      font-size: 3rem;
+      letter-spacing: -0.5px;
+    }
+
+
   }
 
   &__subtitle {
-    padding: 0 20px;
+    padding: 0 25px;
     line-height: 1.7;
   }
 }
@@ -49,6 +56,11 @@
 
 .mainFooter-heading {
   text-align: center;
+
+  @media (min-width: $ds) {
+    padding: 0 160px;
+    margin-bottom: 44px;
+  }
 }
 
 .phone-icon {
@@ -59,16 +71,31 @@
 
 .email-icon{
   margin-left: 7px;
+
+  @media (min-width: $ds) {
+    margin-left: 1px;
+  }
 }
 
 .contacts {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 116px;
+  align-items: flex-start;
+  padding-top: 0;
 
   @media (min-width: $tb) {
     justify-content: space-between;
     padding: 0 115px;
+    min-height: 80px;
+  }
+
+  @media (min-width: $ds) {
+    padding: 0 245px;
+    min-height: 140px;
+    align-items: flex-start;
+    padding-top: 16px;
   }
 }
 
@@ -80,11 +107,19 @@
 }
 
 .email-link {
-  margin-bottom: 22px;
+  margin-bottom: -26px;
 
   @media (min-width: $tb) {
     margin-bottom: 0;
     margin-left: -16px;
+  }
+}
+
+.phone-link {
+  margin-top: -6px;
+
+  @media (min-width: $tb) {
+    margin-top: 0;
   }
 }
 

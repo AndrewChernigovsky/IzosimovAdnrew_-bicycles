@@ -13,7 +13,8 @@
     }
 
     @media (min-width: $ds) {
-      padding: 50px 315px 0;
+      padding: 92px 315px 0;
+      margin-bottom: 63px;
     }
   }
 
@@ -55,12 +56,23 @@
       width: 91px;
       height: 91px;
     }
+
+    @media (min-width: $ds) {
+      width: 66px;
+      height: 66px;
+    }
   }
 
   &__btn-img {
     @media (min-width: $tb) {
       height: 27px;
       margin-left: 7px;
+    }
+  }
+
+  &__title {
+    @media (min-width: $ds) {
+      margin-bottom: 0;
     }
   }
 
@@ -74,10 +86,19 @@
     @media (min-width: $tb) {
       padding: 0 132px;
     }
+
+    @media (min-width: $ds) {
+      padding: 0 47px;
+    }
   }
 
   @media (min-width: $tb) {
     background: linear-gradient(to bottom, $basicGray9 82%, $bodybg 13%);
     margin-bottom: 65px;
+  }
+
+  @media (min-width: $ds) {
+    background: linear-gradient(to bottom, $basicGray9 87.5%, $bodybg 13%);
+    margin-bottom: 147px;
   }
 }
