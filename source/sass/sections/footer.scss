@@ -1,38 +1,75 @@
+.mainFooter {
+
+  &__wrapper {
+    @media (min-width: $tb) {
+      max-width: $ds;
+      min-width: $sm;
+      margin: 0 auto;
+      padding: 0 37px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+
+    @media (min-width: $tb) {
+      font-size: 2.4rem;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__subtitle {
+    padding: 0 20px;
+    line-height: 1.7;
+  }
+}
+
 .mainMap-image {
   flex: none;
   object-fit: contain;
   min-width: 100%;
   background-image: url("../../img/content/Map.jpg");
-
-  @media (min-width: $ds) {
-    min-height: 530px;
-  }
+  min-height: 252px;
+  margin-bottom: 34px;
 
   iframe {
     min-width: 100%;
     min-height: inherit;
   }
+
+  @media (min-width: $tb) {
+    min-height: 546px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $ds) {
+    min-height: 530px;
+  }
 }
 
-.manFooter-heading {
+.mainFooter-heading {
   text-align: center;
 }
 
 .phone-icon {
   fill: $white;
   stroke: $basicdecor;
+  margin-left: -10px;
 }
 
-.email-icon,
-.phone-icon {
-  margin-right: 5px;
+.email-icon{
+  margin-left: 7px;
 }
 
 .contacts {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: center;
   flex-wrap: wrap;
+
+  @media (min-width: $tb) {
+    justify-content: space-between;
+    padding: 0 115px;
+  }
 }
 
 .email-link,
@@ -40,4 +77,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.email-link {
+  margin-bottom: 22px;
+
+  @media (min-width: $tb) {
+    margin-bottom: 0;
+    margin-left: -16px;
+  }
+}
+
+.email-text {
+  padding-left: 12px;
+}
+
+.phone-text {
+  padding-left: 17px;
 }

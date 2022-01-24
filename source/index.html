@@ -9,6 +9,35 @@
   <link rel="preload" href="../fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url( "img/pixelPerfect/mobile-screen1.jpg" );
+    }
+    /* Планшет */
+    @media ( min-width: 768px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/pixelPerfect/tablet-screen1.jpg");
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 1024px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "img/pixelPerfect/desktop-screen1.jpg" );
+      }
+    }
+
+    BODY {
+      opacity: 0.5;
+    }
+  </style> -->
+  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+  <script src="../node_modules/pixel-glass/script.js"></script>
 </head>
 
 <body class="Mainpage-bike__body">
@@ -141,16 +170,16 @@
       </div>
     </section>
 
-    <section class="videoBike none">
+    <section class="videoBike">
       <div class="videoBike__wrapper container">
         <h2 class="f-basicSemiBold-Middle2">Видео про велосипеды</h2>
-        <p class="f-basicLight-menu videoBike__subtitle">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <p class="f-basicLightT videoBike__subtitle">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       </div>
 
       <div class="videoBike__video container">
         <div class="videoBike__image-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/content/Video-Bike.webp 1x, img/content/Video-Bike@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/content/Video-Bike-ds.webp 1x, img/content/Video-Bike-ds@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/content/Video-Bike-tb.webp 1x, img/content/Video-Bike-tb@2x.webp 2x">
             <source type="image/webp" media="(min-width: 320px)" srcset="img/content/Video-Bike.webp 1x, img/content/Video-Bike@2x.webp 2x">
             <img class="videoBike__image" srcset="img/content/Video-Bike.jpg" alt="Видео о велосипедах" loading="lazy" width="929" height="522">
@@ -167,27 +196,29 @@
     </section>
   </main>
 
-  <footer class="mainFooter container none">
-    <div class="manFooter-heading">
-      <h2 class="f-basicSemiBold-Middle">Как нас найти?</h2>
-      <p class="f-basicRegular-Small2">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-    </div>
-    <div class="mainMap-image">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.217622786378!2d30.323253357727474!3d59.938912789005606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1642772657829!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <footer class="mainFooter">
+    <div class="mainFooter__wrapper">
+      <div class="mainFooter-heading">
+        <h2 class="f-basicSemiBold-Middle3 mainFooter__title">Как нас найти?</h2>
+        <p class="f-basicRegular-Small2 mainFooter__subtitle">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      </div>
+      <div class="mainMap-image">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.217622786378!2d30.323253357727474!3d59.938912789005606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1642772657829!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
 
-    <div class="contacts none">
+    <div class="contacts">
       <a href="mailto::puteshestviemechta@gmail.ru" class="link email-link">
         <svg role="img" class="email-icon" width="26" height="20" aria-label="email">
           <use xlink:href="img/sprite.svg#mail"></use>
         </svg>
-        <span class="email-text f-basicRegular-Small2">puteshestviemechta@gmail.ru</span>
+        <span class="email-text f-basicRegular-Small3">puteshestviemechta@gmail.ru</span>
       </a>
       <a href="tel:+749978468446" class="link phone-link">
         <svg role="img" class="phone-icon" width="22" height="23" aria-label="phone">
           <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
-        <span class="phone-text f-basicRegular-Small2">+7 (499) -784-684-46</span>
+        <span class="phone-text f-basicRegular-Small3">+7 (499) -784-684-46</span>
       </a>
     </div>
   </footer>
