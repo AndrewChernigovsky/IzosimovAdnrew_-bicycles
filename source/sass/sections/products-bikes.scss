@@ -48,12 +48,20 @@
   @media (min-width: $tb) {
     margin: 0 10px;
     margin-bottom: 53px;
+
+    img {
+      width: 270px;
+    }
   }
 
   @media (min-width: $ds) {
     margin: 0;
     margin-bottom: 53px;
     padding: 0 24px;
+
+    img {
+      width: 342px;
+    }
   }
 }
 

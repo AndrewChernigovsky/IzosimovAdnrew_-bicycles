@@ -20,38 +20,30 @@ navToggle.addEventListener("click", function () {
 const mainForm = document.getElementById("mainForm"),
   userNameMainForm = document.getElementById("username"),
   userPhoneMainForm = document.getElementById("phone"),
-  inputs = document.querySelectorAll("Mainform-calltoAction__input[name]"),
   buttonMainForm = document.getElementById("mainFormSubmit");
 
 mainForm.addEventListener("submit", function (evt) {
   if (isValidName(userNameMainForm)) {
-    userNameMainForm.classList.add("error");
+    userNameMainForm.classList.add("error")
     evt.preventDefault();
   } else {
-    userNameMainForm.classList.remove("error");
-    userNameMainForm.classList.add("success");
-    localStorage.userNameMainForm = userNameMainForm.value
-    localStorage.getItem('username', userNameMainForm.value)
-    localStorage.setItem('username', userNameMainForm.value)
+    userNameMainForm.classList.remove("error")
+    userNameMainForm.classList.add("success")
+    localStorage.setItem("username", userNameMainForm.value);
   }
 
   if (isValidPhone(userPhoneMainForm)) {
-    userPhoneMainForm.classList.add("error");
+    userPhoneMainForm.classList.add("error")
     evt.preventDefault();
   } else {
-    userPhoneMainForm.classList.remove("error");
-    userPhoneMainForm.classList.add("success");
-    localStorage.userPhoneMainForm = userPhoneMainForm.value
-    localStorage.getItem('phone', userPhoneMainForm.value)
-    localStorage.setItem('phone', userPhoneMainForm.value)
+    userPhoneMainForm.classList.remove("error")
+    userPhoneMainForm.classList.add("success")
+    localStorage.setItem("phone", userPhoneMainForm.value);
   }
 
-  // if(evt) {
-  //   // evt.preventDefault()
-  //   // localStorage.setItem('username', userNameMainForm.value)
-  //   // localStorage.setItem('phone', userPhoneMainForm.value)
-  //   alert('Форма успешно отправлена');
-  // }
+  if(userPhoneMainForm.classList.contains("success") && userNameMainForm.classList.contains("success")) {
+    alert("Форма успешно отправлена")
+  }
 });
 
 function isValidPhone(input) {
