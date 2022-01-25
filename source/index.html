@@ -1,43 +1,14 @@
 <!DOCTYPE html>
-<html class="Mainpage-bike" lang="en">
+<html class="Mainpage-bike" lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>shop bike</title>
+  <title>Спортмагазин</title>
   <link rel="preload" href="../fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию мобильный макет */
-      background-image: url( "img/pixelPerfect/mobile-screen1.jpg" );
-    }
-    /* Планшет */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url( "img/pixelPerfect/tablet-screen1.jpg");
-      }
-    }
-    /* Десктоп */
-    @media ( min-width: 1024px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url( "img/pixelPerfect/desktop-screen1.jpg" );
-      }
-    }
-
-    BODY {
-      opacity: 0.5;
-    }
-  </style> -->
-  <link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
-  <script src="../node_modules/pixel-glass/script.js"></script>
 </head>
 
 <body class="Mainpage-bike__body">
@@ -45,7 +16,7 @@
     <div class="main-header__wrapper">
       <div class="main-header__inner container">
         <div class="logo">
-          <a class="logo__link logo-linkMain" href="#no__scroll">
+          <a class="logo__link logo-linkMain">
             <svg role="img" class="logo" width="67" height="20" aria-label="logotype">
               <use xlink:href="img/sprite.svg#Logotype"></use>
             </svg>
@@ -58,16 +29,16 @@
             </button>
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">О нас</a>
+                <a class="main-nav__link f-basicLight-menu" href="#about-us">О нас</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">Виды велосипедов</a>
+                <a class="main-nav__link f-basicLight-menu" href="#products-bike">Виды велосипедов</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">Видео про велосипеды</a>
+                <a class="main-nav__link f-basicLight-menu" href="#videoBike">Видео про велосипеды</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link f-basicLight-menu" href="#no__scroll">Контакты</a>
+                <a class="main-nav__link f-basicLight-menu" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -78,7 +49,7 @@
     <div class="callToAction-section container">
       <div class="present-company">
         <div class="logo">
-          <a class="logo__link logo-linkMain" href="#no__scroll">
+          <a class="logo__link logo-linkMain">
             <svg role="img" class="logo" width="67" height="20" aria-label="logotype">
               <use xlink:href="img/sprite.svg#Logotype"></use>
             </svg>
@@ -95,12 +66,12 @@
           <div class="wrapperMainForm">
             <div class="Mainform-calltoAction__username">
               <label for="username"></label>
-              <input class="Mainform-calltoAction__input" type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя" required>
+              <input class="Mainform-calltoAction__input" type="text" name="username" id="username" placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя" autocomplete="on" required>
               <sup class="Mainform-calltoAction__input-star">*</sup>
             </div>
             <div class="Mainform-calltoAction__phone">
               <label for="phone"></label>
-              <input class="Mainform-calltoAction__input" type="tel" name="phone" id="phone"  maxlength="18" minlenght="11" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона"  required>
+              <input class="Mainform-calltoAction__input" type="tel" name="phone" id="phone"  maxlength="18" minlenght="11" placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона" autocomplete="on" required>
               <sup class="Mainform-calltoAction__input-star">*</sup>
             </div>
             <button class="Mainform-calltoAction__btn" type="submit" id="mainFormSubmit">
@@ -114,7 +85,7 @@
 
   </header>
   <main class="main-section">
-    <section class="facts containerMain">
+    <section class="facts containerMain" id="about-us">
       <h2 class="f-basicSemiBold-Middle">Несколько фактов о нас</h2>
       <div class="facts__items">
         <div class="facts__item">
@@ -135,7 +106,7 @@
         </div>
       </div>
     </section>
-    <section class="bike-products">
+    <section class="bike-products" id="products-bike">
       <div class="containerBike">
         <h2 class="f-basicSemiBold-Middle bike-products__title">Виды велосипедов</h2>
         <div class="products-bikes">
@@ -170,7 +141,7 @@
       </div>
     </section>
 
-    <section class="videoBike">
+    <section class="videoBike" id="videoBike">
       <div class="videoBike__wrapper container">
         <h2 class="f-basicSemiBold-Middle2 videoBike__title">Видео про велосипеды</h2>
         <p class="f-basicLightT videoBike__subtitle">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
@@ -196,7 +167,7 @@
     </section>
   </main>
 
-  <footer class="mainFooter">
+  <footer class="mainFooter" id="contacts">
     <div class="mainFooter__wrapper">
       <div class="mainFooter-heading">
         <h2 class="f-basicSemiBold-Middle3 mainFooter__title">Как нас найти?</h2>

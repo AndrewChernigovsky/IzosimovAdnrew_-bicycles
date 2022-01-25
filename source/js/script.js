@@ -20,6 +20,7 @@ navToggle.addEventListener("click", function () {
 const mainForm = document.getElementById("mainForm"),
   userNameMainForm = document.getElementById("username"),
   userPhoneMainForm = document.getElementById("phone"),
+  inputs = document.querySelectorAll("Mainform-calltoAction__input[name]"),
   buttonMainForm = document.getElementById("mainFormSubmit");
 
 mainForm.addEventListener("submit", function (evt) {
@@ -29,6 +30,9 @@ mainForm.addEventListener("submit", function (evt) {
   } else {
     userNameMainForm.classList.remove("error");
     userNameMainForm.classList.add("success");
+    localStorage.userNameMainForm = userNameMainForm.value
+    localStorage.getItem('username', userNameMainForm.value)
+    localStorage.setItem('username', userNameMainForm.value)
   }
 
   if (isValidPhone(userPhoneMainForm)) {
@@ -37,7 +41,17 @@ mainForm.addEventListener("submit", function (evt) {
   } else {
     userPhoneMainForm.classList.remove("error");
     userPhoneMainForm.classList.add("success");
+    localStorage.userPhoneMainForm = userPhoneMainForm.value
+    localStorage.getItem('phone', userPhoneMainForm.value)
+    localStorage.setItem('phone', userPhoneMainForm.value)
   }
+
+  // if(evt) {
+  //   // evt.preventDefault()
+  //   // localStorage.setItem('username', userNameMainForm.value)
+  //   // localStorage.setItem('phone', userPhoneMainForm.value)
+  //   alert('Форма успешно отправлена');
+  // }
 });
 
 function isValidPhone(input) {
@@ -54,3 +68,20 @@ userPhoneMainForm.oninput = function () {
   var rep = /[a-zA-ZА-Яа-я]/g;
   this.value = this.value.replace(rep, "");
 };
+
+/////Anchors
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href').substr(1)
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
