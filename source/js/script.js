@@ -1,26 +1,27 @@
 "use strict";
 
-// BurgerMenu
-let navMain = document.querySelector(".main-nav");
-let navToggle = document.querySelector(".main-nav__toggle");
-
-navMain.classList.remove("main-nav--nojs");
-
-navToggle.addEventListener("click", function () {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
-  } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
-  }
-});
-
-// Form
 const mainForm = document.getElementById("mainForm"),
   userNameMainForm = document.getElementById("username"),
   userPhoneMainForm = document.getElementById("phone"),
   buttonMainForm = document.getElementById("mainFormSubmit");
+
+let navMain = document.querySelector(".main-nav"),
+    navToggle = document.querySelector(".main-nav__toggle"),
+    mainNavOpened = 'main-nav--closed',
+    mainNavClosed = 'main-nav--opened';
+
+navMain.classList.remove("main-nav--nojs");
+
+navToggle.addEventListener("click", function () {
+  if (navMain.classList.contains(mainNavClosed)) {
+    navMain.classList.remove(mainNavClosed);
+    navMain.classList.add(mainNavOpened);
+  } else {
+    navMain.classList.add(mainNavClosed);
+    navMain.classList.remove(mainNavOpened);
+  }
+});
+
 
 mainForm.addEventListener("submit", function (evt) {
   if (isValidName(userNameMainForm)) {
@@ -60,8 +61,6 @@ userPhoneMainForm.oninput = function () {
   var rep = /[a-zA-ZА-Яа-я]/g;
   this.value = this.value.replace(rep, "");
 };
-
-/////Anchors
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 
