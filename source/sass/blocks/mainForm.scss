@@ -9,13 +9,14 @@
     font-weight: 600;
     border: 1px solid $basicGray8;
 
-    &::placeholder{
+    &::placeholder {
       color: $basicGray2;
       font-size: 1.5rem;
       font-weight: 400;
     }
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       border: 1px solid $black;
     }
   }
