@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Спортмагазин</title>
-  <link rel="preload" href="fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin />
-  <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -25,7 +25,7 @@
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <div class="main-nav__wrapper">
             <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
+              <span>Открыть меню</span>
             </button>
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="callToAction-section container">
+    <div class="callToAction-section container none">
       <div class="present-company">
         <div class="logo">
           <a class="logo__link logo-linkMain">
@@ -56,67 +56,67 @@
           </a>
         </div>
         <h1 class="f-basicBold">Мы продаем велосипеды</h1>
-        <p class="f-basicLight-Small callToAction-section__subtitle">
+        <p>
           Наш магазин отбирает только самые лучшие велосипеды для продажи
         </p>
       </div>
 
       <div class="callToAction-sectionForm">
-        <form class="Mainform-calltoAction" action="https://echo.htmlacademy.ru/" method="get" id="mainForm">
-          <p class="f-basicSemiBold mainForm-heading">
+        <form action="https://echo.htmlacademy.ru/" method="get" id="mainForm">
+          <p>
             Заполните поля ниже и мы подберем велосипед Вашей мечты
           </p>
-          <div class="wrapperMainForm">
-            <div class="Mainform-calltoAction__username">
+          <div class="callToAction-sectionForm__wrapper">
+            <div class="callToAction-sectionForm__username">
               <label for="username"></label>
-              <input class="Mainform-calltoAction__input" type="text" name="username" id="username"
+              <input type="text" name="username" id="username"
                 placeholder="Введите Ваше Имя" aria-label="Введите Ваше Имя" autocomplete="on" required />
-              <sup class="Mainform-calltoAction__input-star">*</sup>
+              <sup class="callToAction-sectionForm__input-star">*</sup>
             </div>
-            <div class="Mainform-calltoAction__phone">
+            <div class="callToAction-sectionForm__phone">
               <label for="phone"></label>
-              <input class="Mainform-calltoAction__input" type="tel" name="phone" id="phone" maxlength="18"
+              <input type="tel" name="phone" id="phone" maxlength="18"
                 placeholder="Введите Ваш номер телефона" aria-label="Введите Ваш номер телефона" autocomplete="on"
                 required />
-              <sup class="Mainform-calltoAction__input-star">*</sup>
+              <sup class="callToAction-sectionForm__input-star">*</sup>
             </div>
-            <button class="Mainform-calltoAction__btn" type="submit" id="mainFormSubmit">
-              <span class="f-basicSemiBold-Small">Подобрать велосипед мечты</span>
+            <button class="callToAction-sectionForm__btn" type="submit" id="mainFormSubmit">
+              <span>Подобрать велосипед мечты</span>
             </button>
           </div>
         </form>
       </div>
     </div>
   </header>
-  <main class="main-section">
+  <main class="main-section none">
     <section class="facts containerMain" id="about-us">
       <h2 class="f-basicSemiBold-Middle">Несколько фактов о нас</h2>
       <div class="facts__items">
         <div class="facts__item">
-          <p class="f-basicBold-Decoration facts__item-count">01</p>
-          <p class="f-basicRegular facts__item-text">
+          <span>01</span>
+          <p>
             Самый широкий выбор велосипедов!
           </p>
         </div>
         <div class="facts__item">
-          <p class="f-basicBold-Decoration facts__item-count">02</p>
-          <p class="f-basicRegular facts__item-text facts__item-textPadding">
+          <span>02</span>
+          <p>
             Доставка велосипедов по всей России!
           </p>
         </div>
         <div class="facts__item">
-          <p class="f-basicBold-Decoration facts__item-count facts__item-countDown">
+          <span>
             03
-          </p>
-          <p class="f-basicRegular facts__item-text">
+          </span>
+          <p>
             Большой выбор крутых аксессуаров!
           </p>
         </div>
         <div class="facts__item">
-          <p class="f-basicBold-Decoration facts__item-count facts__item-countDown">
+          <span>
             04
-          </p>
-          <p class="f-basicRegular facts__item-text">
+          </span>
+          <p>
             Профессиональные консультации!
           </p>
         </div>
@@ -197,7 +197,7 @@
         <h2 class="f-basicSemiBold-Middle2 videoBike__title">
           Видео про велосипеды
         </h2>
-        <p class="f-basicLightT videoBike__subtitle">
+        <p>
           В этом видео мы подробно расскажем про особенности выбора велосипеда
           для себя.
         </p>
@@ -232,13 +232,13 @@
     </section>
   </main>
 
-  <footer class="mainFooter" id="contacts">
+  <footer class="mainFooter none" id="contacts">
     <div class="mainFooter__wrapper">
       <div class="mainFooter-heading">
         <h2 class="f-basicSemiBold-Middle3 mainFooter__title">
           Как нас найти?
         </h2>
-        <p class="f-basicRegular-Small2 mainFooter__subtitle">
+        <p>
           Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д.
           19
         </p>

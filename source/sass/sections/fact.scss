@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
 
-  margin-bottom: 60px;
+  margin-bottom: 23px;
 
   &__items {
     display: flex;
@@ -29,45 +29,58 @@
     @media (min-width: $ds) {
       flex-basis: 24.3%;
     }
-  }
 
-  &__item-count {
-    margin-bottom: 30px;
+    span {
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: $basicdecor;
+      line-height: 0.38;
 
-    @media (min-width: $ds) {
-      margin-top: 33px;
+      @media (min-width: $ds) {
+        margin-top: 33px;
+      }
+
+      &:nth-child(n+3) {
+        margin-top: 36px;
+        margin-bottom: 22px;
+
+        @media (min-width: $tb) {
+          margin-top: 31px;
+          margin-bottom: 28px;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: $black;
+      letter-spacing: -0.5px;
+      font-weight: 400;
+      line-height: 1.87;
+
+      @media (min-width: $tb) {
+        font-size: 2.2rem;
+        line-height: 1.57;
+      }
+
+      &:nth-child(4n+2) {
+        @media (min-width: $ds) {
+          padding: 0 10px;
+        }
+
+        @media (min-width: $tb) {
+          margin-bottom: 47px;
+        }
+
+        @media (min-width: $ds) {
+          margin-bottom: 127px;
+        }
+      }
     }
   }
 
-  &__item-countDown {
-    margin-top: 36px;
-    margin-bottom: 22px;
-
-    @media (min-width: $tb) {
-      margin-top: 31px;
-      margin-bottom: 28px;
-    }
-  }
-
-  &__item-text {
-    letter-spacing: -0.5px;
-
-    @media (min-width: $tb) {
-      line-height: 1.57;
-    }
-  }
-
-  &__item-textPadding {
-    @media (min-width: $ds) {
-      padding: 0 10px;
-    }
-  }
-
-  @media (min-width: $tb) {
-    margin-bottom: 47px;
-  }
-
-  @media (min-width: $ds) {
-    margin-bottom: 127px;
+  h2 {
+    margin-bottom: 57px;
   }
 }

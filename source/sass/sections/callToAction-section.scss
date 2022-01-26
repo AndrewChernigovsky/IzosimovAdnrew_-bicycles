@@ -34,35 +34,63 @@
   }
 }
 
-.Mainform-calltoAction {
-  display: grid;
 
-  &__input {
-    padding: 0 20px;
-    height: 48px;
-    min-width: 286px;
-    border: 1px solid $basicGray8;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    padding-top: 4px;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: $basicGray2;
+.callToAction-sectionForm {
 
-    @media (min-width: $tb) {
-      min-width: 320px;
-    }
+  &__wrapper {
+    display: grid;
 
-    @media (min-width: $ds) {
-      min-width: 327px;
-      padding: 6px 28px 0;
-    }
-
-    &::placeholder {
-      font-weight: 400;
+    input {
+      color: $black;
+      font-weight: 600;
+      border: 1px solid $basicGray8;
+      align-self: center;
+      padding: 0 20px;
+      height: 48px;
+      min-width: 286px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      padding-top: 4px;
       font-size: 1.5rem;
-      color: $basicGray2;
+
+      &::placeholder {
+        color: $basicGray2;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      &:focus,
+      &:hover {
+        border: 1px solid $black;
+      }
+
+      @media (min-width: $tb) {
+        min-width: 320px;
+      }
+
+      @media (min-width: $ds) {
+        min-width: 327px;
+        padding: 6px 28px 0;
+      }
     }
+  }
+
+
+  &__username,
+  &__phone {
+    position: relative;
+  }
+
+
+  &__input-star {
+    position: absolute;
+    right: 0;
+    color: $red;
+    display: block;
+    top: 14px;
+    width: 14px;
+    height: 14px;
+    font-size: 1.4rem;
   }
 
   &__btn {
@@ -81,6 +109,13 @@
       transition: 0.3s ease;
     }
 
+    span {
+      font-weight: 600;
+      color: $black;
+      line-height: 1.21;
+      font-size: 1.5rem;
+    }
+
     @media (min-width: $tb) {
       min-width: 320px;
     }
@@ -90,36 +125,37 @@
     }
   }
 
-  &__username,
-  &__phone {
-    align-self: center;
+  form p {
+    font-size: 1.8rem;
+    line-height: 1.58;
+
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 19px;
+
+    @media (min-width: $tb) {
+      padding: 0 40px;
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: $ds) {
+      padding: 0;
+      margin-bottom: 19px;
+      font-size: 1.7rem;
+      color: $white;
+    }
   }
-}
 
-.wrapperMainForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.callToAction-sectionForm {
   @media (min-width: $ds) {
     flex-basis: 38.5%;
     padding-right: 52px;
   }
 }
 
-.mainForm-heading {
-  text-align: center;
-  margin-top: 6px;
-  margin-bottom: 19px;
+.error {
+  border: 1px solid $red;
+}
 
-  @media (min-width: $tb) {
-    padding: 0 40px;
-    margin-bottom: 28px;
-  }
-
-  @media (min-width: $ds) {
-    padding: 0;
-    margin-bottom: 19px;
-  }
+.success {
+  border: 1px solid $basicdecor;
 }

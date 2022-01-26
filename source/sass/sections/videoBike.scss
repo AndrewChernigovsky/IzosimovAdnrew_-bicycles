@@ -16,6 +16,13 @@
       padding: 92px 315px 0;
       margin-bottom: 63px;
     }
+
+    p {
+      line-height: 1.76;
+      font-size: 1.6rem;
+      color: $white;
+      font-weight: 300;
+    }
   }
 
   &__image-wrapper {
@@ -74,10 +81,6 @@
     @media (min-width: $ds) {
       margin-bottom: 0;
     }
-  }
-
-  &__subtitle {
-    line-height: 1.76;
   }
 
   &__video {

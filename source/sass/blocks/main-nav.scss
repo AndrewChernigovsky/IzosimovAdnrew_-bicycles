@@ -1,22 +1,26 @@
 .main-nav {
-  width: auto;
-  position: relative;
-  min-height: 50px;
-  top: -10px;
-  right: -10px;
-  background-color: transparent;
 
-  @media (min-width: $tb) {
-    display: block;
-    right: -20px;
-    width: 50px;
-    height: 50px;
-  }
-
-  @media (min-width: $ds) {
-    min-height: 100px;
+  @media (max-width: $hd) {
+    min-height: 70px;
     flex-basis: 100%;
     margin-bottom: 219px;
+  }
+
+  @media (max-width: $ds) {
+    display: block;
+    right: -20px;
+    min-width: 50px;
+    min-height: 50px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tb) {
+    min-width: auto;
+    position: relative;
+    min-height: 50px;
+    top: -10px;
+    right: -10px;
+    background-color: transparent;
   }
 
   &__list {
@@ -47,6 +51,19 @@
     cursor: pointer;
     border: none;
     background-color: $basicdecor;
+
+    span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
 
     @media (min-width: $ds) {
       display: none;
