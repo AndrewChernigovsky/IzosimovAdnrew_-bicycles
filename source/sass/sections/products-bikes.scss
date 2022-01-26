@@ -1,16 +1,20 @@
 .bike-products {
   text-align: center;
-
   background-color: $basicLightGray;
-  padding-top: 35px;
-  padding-bottom: 9px;
 
   &__title {
-    margin-bottom: 32px;
+    @media (max-width: $ds) {
+      margin-bottom: 32px;
+    }
 
     @media (min-width: $ds) {
       margin-bottom: 46px;
     }
+  }
+
+  @media (max-width: $tb) {
+    padding-top: 35px;
+    padding-bottom: 11px;
   }
 
   @media (min-width: $tb) {
@@ -27,8 +31,11 @@
 .products-bikes {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: $ds) {
+    align-items: center;
+  }
 
   @media (min-width: $ds) {
     align-items: flex-start;
@@ -38,11 +45,14 @@
 .bike-item {
   display: grid;
   justify-items: center;
-  padding: 0 15px;
-  margin-bottom: 45px;
 
   &__subtitle {
     margin-top: 20px;
+  }
+
+  @media (max-width: $tb) {
+    padding: 0 15px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $tb) {
@@ -74,10 +84,16 @@
     position: absolute;
     background-image: url("../img/decoration/Ellipse.svg");
     z-index: -1;
-    width: 127px;
-    height: 127px;
-    top: 203px;
-    left: -11px;
+
+    @media (max-width: $ds) {
+      width: 127px;
+      height: 127px;
+    }
+
+    @media (max-width: $tb) {
+      top: 203px;
+      left: -11px;
+    }
 
     @media (min-width: $tb) {
       top: 202px;
@@ -132,8 +148,11 @@
   }
 
   &::after {
-    top: 538px;
-    left: 311px;
+
+    @media (max-width: $ds) {
+      top: 538px;
+      left: 311px;
+    }
 
     @media (min-width: $ds) {
       top: 542px;
@@ -150,10 +169,16 @@
     position: absolute;
     background-image: url("../img/decoration/Ellipse.svg");
     z-index: 1;
-    width: 68px;
-    height: 68px;
-    top: -22px;
-    left: 231px;
+
+    @media (max-width: $ds) {
+      width: 68px;
+      height: 68px;
+    }
+
+    @media (max-width: $tb) {
+      top: -22px;
+      left: 231px;
+    }
 
     @media (min-width: $tb) {
       top: -22px;

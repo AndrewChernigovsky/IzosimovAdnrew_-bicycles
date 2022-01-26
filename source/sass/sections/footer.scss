@@ -9,7 +9,10 @@
   }
 
   &__title {
-    margin-bottom: 27px;
+
+    @media (max-width: $tb) {
+      margin-bottom: 27px;
+    }
 
     @media (min-width: $tb) {
       font-size: 2.4rem;
@@ -28,17 +31,20 @@
   object-fit: contain;
   min-width: 100%;
   background-image: url("../img/content/Map.jpg");
-  min-height: 252px;
-  margin-bottom: 34px;
 
   iframe {
     min-width: 100%;
     min-height: inherit;
   }
 
+  @media (max-width: $tb) {
+    min-height: 252px;
+    margin-bottom: 34px;
+  }
+
   @media (min-width: $tb) {
     min-height: 546px;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $ds) {
@@ -58,7 +64,10 @@
     padding: 0 25px;
     line-height: 1.7;
     font-size: 1.7rem;
-    color: $basicGray6;
+
+    @media (max-width: $ds) {
+      color: $basicGray6;
+    }
 
     @media (min-width: $ds) {
       color: $basicGray3;
@@ -73,7 +82,10 @@
 }
 
 .email-icon {
-  margin-left: 7px;
+
+  @media (max-width: $ds) {
+    margin-left: 7px;
+  }
 
   @media (min-width: $ds) {
     margin-left: 1px;
@@ -82,12 +94,15 @@
 
 .contacts {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  min-height: 116px;
   align-items: flex-start;
-  padding: 0 21%;
   padding-top: 0;
+
+  @media (max-width: $tb) {
+    justify-content: center;
+    padding: 0 21%;
+    min-height: 116px;
+  }
 
   @media (min-width: $tb) {
     justify-content: space-between;
@@ -111,7 +126,9 @@
 }
 
 .email-link {
-  margin-bottom: -26px;
+  @media (max-width: $tb) {
+    margin-bottom: -26px;
+  }
 
   @media (min-width: $tb) {
     margin-bottom: 0;
@@ -120,7 +137,10 @@
 }
 
 .phone-link {
-  margin-top: -6px;
+
+  @media (max-width: $tb) {
+    margin-top: -6px;
+  }
 
   @media (min-width: $tb) {
     margin-top: 0;

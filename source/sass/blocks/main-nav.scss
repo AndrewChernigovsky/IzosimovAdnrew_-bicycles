@@ -3,10 +3,18 @@
   @media (max-width: $hd) {
     min-height: 70px;
     flex-basis: 100%;
-    margin-bottom: 219px;
   }
 
-  @media (max-width: $ds) {
+  @media (min-width: $sm) and (max-width: $tb) {
+    min-width: auto;
+    position: relative;
+    min-height: 50px;
+    top: -10px;
+    right: -10px;
+    background-color: transparent;
+  }
+
+  @media (min-width: $tb) and (max-width: $ds) {
     display: block;
     right: -20px;
     min-width: 50px;
@@ -14,13 +22,8 @@
     margin-bottom: 0;
   }
 
-  @media (max-width: $tb) {
-    min-width: auto;
-    position: relative;
-    min-height: 50px;
-    top: -10px;
-    right: -10px;
-    background-color: transparent;
+  @media (min-width: $ds) {
+    margin-bottom: 219px;
   }
 
   &__list {
@@ -76,9 +79,10 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      max-width: 879px;
+      max-width: 913px;
       margin: 0 auto;
-      padding: 37px 0;
+      padding: 26px 40px;
+      padding-right: 0;
     }
   }
 

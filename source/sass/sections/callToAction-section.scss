@@ -40,12 +40,17 @@
   &__wrapper {
     display: grid;
 
+    @media (max-width: $hd) {
+      width: min-content;
+      margin: 0 auto;
+    }
+
     input {
       color: $black;
       font-weight: 600;
       border: 1px solid $basicGray8;
       align-self: center;
-      padding: 0 20px;
+      padding: 0 23px;
       height: 48px;
       min-width: 286px;
       border-radius: 6px;
@@ -75,7 +80,6 @@
     }
   }
 
-
   &__username,
   &__phone {
     position: relative;
@@ -103,6 +107,15 @@
     align-self: center;
     cursor: pointer;
 
+    @media (max-width: $tb) {
+      padding-bottom: 7px;
+    }
+
+    @media (min-width: $tb) and (max-width: $ds) {
+      padding-bottom: 0;
+    }
+
+
     &:hover {
       border: 1px solid $white;
       background-color: aqua;
@@ -128,7 +141,7 @@
   form p {
     font-size: 1.8rem;
     line-height: 1.58;
-
+    font-weight: 600;
     text-align: center;
     margin-top: 6px;
     margin-bottom: 19px;
