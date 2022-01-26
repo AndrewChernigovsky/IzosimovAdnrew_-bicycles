@@ -75,7 +75,6 @@
       }
 
       &:nth-child(4n+2) {
-
         @media (min-width: $tb) and (max-width: $ds) {
           margin-bottom: 53px;
         }
@@ -89,7 +88,6 @@
   }
 
   h2 {
-
     @media (max-width: $hd) {
       margin-bottom: 57px;
     }
