@@ -1,15 +1,12 @@
 .bike-products {
   text-align: center;
   background-color: $basicLightGray;
+  padding-top: 121px;
+  padding-bottom: 98px;
 
-  &__title {
-    @media (max-width: $ds) {
-      margin-bottom: 32px;
-    }
-
-    @media (min-width: $ds) {
-      margin-bottom: 46px;
-    }
+  @media (max-width: $ds) {
+    padding-top: 35px;
+    padding-bottom: 18px;
   }
 
   @media (max-width: $tb) {
@@ -17,14 +14,12 @@
     padding-bottom: 11px;
   }
 
-  @media (min-width: $tb) {
-    padding-top: 35px;
-    padding-bottom: 18px;
-  }
+  &__title {
+    margin-bottom: 46px;
 
-  @media (min-width: $ds) {
-    padding-top: 121px;
-    padding-bottom: 98px;
+    @media (max-width: $ds) {
+      margin-bottom: 32px;
+    }
   }
 }
 
@@ -32,30 +27,26 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   @media (max-width: $ds) {
     align-items: center;
-  }
-
-  @media (min-width: $ds) {
-    align-items: flex-start;
   }
 }
 
 .bike-item {
   display: grid;
   justify-items: center;
-
-  &__subtitle {
-    margin-top: 20px;
-  }
+  margin: 0;
+  margin-bottom: 53px;
+  padding: 0 24px;
 
   @media (max-width: $tb) {
     padding: 0 15px;
     margin-bottom: 45px;
   }
 
-  @media (min-width: $tb) {
+  @media (max-width: $ds) {
     margin: 0 10px;
     margin-bottom: 53px;
 
@@ -64,14 +55,12 @@
     }
   }
 
-  @media (min-width: $ds) {
-    margin: 0;
-    margin-bottom: 53px;
-    padding: 0 24px;
+  &__subtitle {
+    margin-top: 20px;
+  }
 
-    img {
-      width: 342px;
-    }
+  img {
+    width: 342px;
   }
 }
 
