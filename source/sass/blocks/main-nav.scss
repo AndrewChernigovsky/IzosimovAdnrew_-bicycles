@@ -1,19 +1,9 @@
 .main-nav {
-  @media (max-width: $hd) {
-    min-height: 70px;
-    flex-basis: 100%;
-  }
+  min-height: 70px;
+  flex-basis: 100%;
+  margin-bottom: 219px;
 
-  @media (min-width: $sm) and (max-width: $tb) {
-    min-width: auto;
-    position: relative;
-    min-height: 50px;
-    top: -10px;
-    right: -10px;
-    background-color: transparent;
-  }
-
-  @media (min-width: $tb) and (max-width: $ds) {
+  @media (max-width: $ds) {
     display: block;
     right: -20px;
     min-width: 50px;
@@ -21,24 +11,30 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $ds) {
-    margin-bottom: 219px;
+  @media (max-width: $tb) {
+    min-width: auto;
+    position: relative;
+    min-height: 50px;
+    top: -10px;
+    right: -10px;
+    margin-bottom: 0;
+    background-color: transparent;
   }
 
   &__list {
-    margin: 0;
-    padding: 0;
     list-style: none;
+    justify-content: space-between;
+    border-bottom: 1px solid $basicGray4;
+    margin: 0 -12px;
+    margin-right: 28px;
+    padding-left: 20px;
+    padding-right: 23px;
+    padding-bottom: 16px;
 
-    @media (min-width: $ds) {
-      justify-content: space-between;
-
-      border-bottom: 1px solid $basicGray4;
-      margin: 0 -12px;
-      margin-right: 28px;
-      padding-left: 20px;
-      padding-right: 23px;
-      padding-bottom: 16px;
+    @media (max-width: $ds) {
+      margin: 0;
+      padding: 0;
+      border:none;
     }
   }
 
@@ -53,6 +49,7 @@
     cursor: pointer;
     border: none;
     background-color: $basicdecor;
+    display: none;
 
     span {
       position: absolute;
@@ -67,21 +64,27 @@
       overflow: hidden;
     }
 
-    @media (min-width: $ds) {
-      display: none;
+    @media (max-width: $ds) {
+      display: block;
     }
   }
 
   &__wrapper {
-    @media (min-width: $ds) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 913px;
+    margin: 0 auto;
+    padding: 26px 40px;
+    padding-right: 0;
+
+    @media (max-width: $ds) {
+      display: block;
       width: 100%;
-      max-width: 913px;
-      margin: 0 auto;
-      padding: 26px 40px;
-      padding-right: 0;
+      max-width: min-content;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -89,6 +92,8 @@
     position: relative;
     display: block;
     text-decoration: none;
+    background: none;
+    border: none;
 
     &:hover {
       opacity: 0.8;
@@ -98,9 +103,8 @@
       opacity: 0.6;
     }
 
-    @media (min-width: $tb) {
-      background: none;
-      border: none;
+    @media (max-width: $tb) {
+      background: $basicGray7;
     }
   }
 }
@@ -122,6 +126,10 @@
     0 16px 0 0 rgba(255, 255, 255, 1);
 }
 
+.main-nav--closed .main-nav__item {
+  display: block;
+}
+
 @media (max-width: $ds) {
   .main-nav--closed .main-nav__item {
     display: none;
@@ -136,29 +144,23 @@
   }
 }
 
-@media (min-width: $ds) {
-  .main-nav--closed .main-nav__item {
-    display: block;
-  }
-}
-
 .main-nav--opened .main-nav__wrapper {
-  position: absolute;
+  position: static;
   top: 0;
   right: 0;
   z-index: 10;
-  min-height: 80vh;
-  min-width: 80vw;
-  background-color: $white;
+  min-height: 62px;
+  min-width: 100%;
+  background-color: transparent;
 
-  @media (min-width: $ds) {
-    position: static;
+  @media (max-width: $ds) {
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 10;
-    min-height: 62px;
-    min-width: 100%;
-    background-color: transparent;
+    min-height: 80vh;
+    min-width: 90vw;
+    background-color: $white;
   }
 }
 
@@ -212,28 +214,30 @@
 }
 
 .main-nav--opened .main-nav__list {
-  min-width: 320px;
-  display: grid;
-  gap: 33px;
-  padding-top: 133px;
-  grid-auto-rows: min-content;
+  padding-top: 0;
+  min-width: 100%;
+  display: flex;
+  box-shadow: none;
   height: min-content;
   padding-bottom: 20px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
-  @media (min-width: $ds) {
-    padding-top: 0;
-    min-width: 100%;
-    display: flex;
-    box-shadow: none;
+  @media (max-width: $ds) {
+    min-width: 320px;
+    display: grid;
+    gap: 33px;
+    padding-top: 133px;
+    grid-auto-rows: min-content;
+    height: min-content;
+    padding-bottom: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 }
 
 .main-nav--opened .main-nav__item {
-  min-width: 320px;
+  min-width: auto;
 
-  @media (min-width: $ds) {
-    min-width: auto;
+  @media (max-width: $ds) {
+    min-width: 90vw;
   }
 }
 
@@ -241,10 +245,10 @@
   padding: 18px 0 18px 16px;
   width: inherit;
   position: relative;
-  background: $basicGray7;
+  background: transparent;
 
-  @media (min-width: $ds) {
-    background: transparent;
+  @media (max-width: $ds) {
+    background: $basicGray7;
   }
 
   &::after {
@@ -257,22 +261,23 @@
     background-image: url("../img/icons/arrow-next.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    display: none;
 
-    @media (min-width: $ds) {
-      display: none;
+    @media (max-width: $ds) {
+      display: block;
     }
   }
 }
 
 .main-nav--closed .main-nav__list {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  flex-wrap: wrap;
 
-  @media (min-width: $ds) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 100%;
-    flex-wrap: wrap;
+  @media (max-width: $ds) {
+    display: none;
   }
 }
