@@ -2,46 +2,49 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  position: absolute;
-  flex-wrap: wrap;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 426px;
-  min-width: 70%;
+  position: static;
+  top: auto;
+  left: auto;
+  transform: translate(0%, 0%);
+  text-align: left;
 
-  @media (min-width: $tb) {
+  @media (max-width: $ds) {
     top: 399px;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 58%;
     text-align: center;
+    position: absolute;
+    flex-wrap: wrap;
   }
 
-  @media (min-width: $ds) {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: translate(0%, 0%);
-    text-align: left;
+  @media (max-width: $tb) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 426px;
+    min-width: 70%;
   }
 
   &__subtitle {
-    padding: 0 10px;
+    padding: 0;
 
-    @media (min-width: $tb) {
-      padding: 0;
+    @media (max-width: $tb) {
+      padding: 0 10px;
     }
   }
 }
 
 
 .callToAction-sectionForm {
-  &__wrapper {
-    display: grid;
+  flex-basis: 38.5%;
+  padding-right: 52px;
 
-    @media (max-width: $hd) {
-      width: min-content;
-      margin: 0 auto;
+  &__wrapper {
+    width: min-content;
+    margin: 0 auto;
+
+    @media (max-width: $ds) {
+      display: grid;
     }
 
     input {
@@ -76,12 +79,25 @@
         min-width: 327px;
         padding: 6px 28px 0;
       }
+
+
+      @media (max-width: $ds) {
+        min-width: 320px;
+        padding: 0 23px;
+        padding-top: 4px;
+      }
+
+      @media (max-width: $tb) {
+        min-width: 286px;
+      }
     }
   }
 
   &__username,
   &__phone {
     position: relative;
+    max-width: min-content;
+    margin: 0 auto;
   }
 
 
@@ -102,18 +118,17 @@
     border-radius: 6px;
     background-color: $basicdecor;
     border: none;
-    min-width: 286px;
+    min-width: 327px;
     align-self: center;
     cursor: pointer;
+
+    @media (max-width: $ds) {
+      padding-bottom: 0;
+    }
 
     @media (max-width: $tb) {
       padding-bottom: 7px;
     }
-
-    @media (min-width: $tb) and (max-width: $ds) {
-      padding-bottom: 0;
-    }
-
 
     &:hover {
       border: 1px solid $white;
@@ -128,39 +143,41 @@
       font-size: 1.5rem;
     }
 
-    @media (min-width: $tb) {
+    @media (max-width: $ds) {
       min-width: 320px;
     }
 
-    @media (min-width: $ds) {
-      min-width: 327px;
+    @media (max-width: $tb) {
+      min-width: 288px;
     }
   }
 
   form p {
-    font-size: 1.8rem;
     line-height: 1.58;
     font-weight: 600;
     text-align: center;
     margin-top: 6px;
+    padding: 0;
     margin-bottom: 19px;
+    font-size: 1.7rem;
+    color: $white;
 
-    @media (min-width: $tb) {
+    @media (max-width: $ds) {
       padding: 0 40px;
       margin-bottom: 28px;
+      color: $black;
+      font-size: 1.8rem;
     }
 
-    @media (min-width: $ds) {
+    @media (max-width: $tb) {
       padding: 0;
-      margin-bottom: 19px;
-      font-size: 1.7rem;
-      color: $white;
+      margin-bottom: 20px;
     }
   }
 
-  @media (min-width: $ds) {
-    flex-basis: 38.5%;
-    padding-right: 52px;
+  @media (max-width: $ds) {
+    flex-basis: 100%;
+    padding-right: 0;
   }
 }
 
