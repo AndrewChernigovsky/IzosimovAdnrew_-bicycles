@@ -41,32 +41,32 @@
   margin-bottom: 53px;
   padding: 0 24px;
 
+  img {
+    width: 342px;
+
+    @media (max-width: $ds) {
+        width: 270px;
+    }
+  }
+
+  @media (max-width: $ds) {
+    margin-bottom: 53px;
+  }
+
   @media (max-width: $tb) {
     padding: 0 15px;
     margin-bottom: 45px;
   }
 
-  @media (max-width: $ds) {
-    margin: 0 10px;
-    margin-bottom: 53px;
-
-    img {
-      width: 270px;
-    }
-  }
-
   &__subtitle {
     margin-top: 20px;
-  }
-
-  img {
-    width: 342px;
   }
 }
 
 .bike-itemPrev {
   position: relative;
   z-index: 1;
+  margin-top: 10px;
 
   &::before {
     content: "";
@@ -74,40 +74,36 @@
     background-image: url("../img/decoration/Ellipse.svg");
     z-index: -1;
 
+    width: 180px;
+    height: 180px;
+    top: 156px;
+    left: -38px;
+
     @media (max-width: $ds) {
       width: 127px;
       height: 127px;
+      top: 202px;
+      left: -14px;
     }
 
     @media (max-width: $tb) {
       top: 203px;
       left: -11px;
     }
-
-    @media (min-width: $tb) {
-      top: 202px;
-      left: -23px;
-    }
-
-    @media (min-width: $ds) {
-      width: 180px;
-      height: 180px;
-      top: 156px;
-      left: -38px;
-    }
   }
 
-  @media (min-width: $ds) {
-    margin-top: 10px;
+  @media (max-width: $ds) {
+    margin-top: 0;
   }
 }
 
 .bike-itemMain {
   align-self: end;
   position: relative;
+  margin-top: 39px;
 
-  @media (min-width: $ds) {
-    margin-top: 39px;
+  @media (max-width: $ds) {
+    margin-top: 0;
   }
 
   &::before,
@@ -118,33 +114,31 @@
     height: 47px;
     z-index: 1;
     background-image: url("../img/decoration/Rectangle.svg");
+    display: block;
 
-    display: none;
 
-    @media (min-width: $ds) {
-      display: block;
+    @media (max-width: $ds) {
+      display: none;
     }
   }
 
   &::before {
-    top: -17px;
-    left: -18px;
+    top: -18px;
+    left: 5px;
 
-    @media (min-width: $ds) {
-      top: -18px;
-      left: 5px;
+    @media (max-width: $ds) {
+      top: -17px;
+      left: -18px;
     }
   }
 
   &::after {
+    top: 542px;
+    left: 342px;
+
     @media (max-width: $ds) {
       top: 538px;
       left: 311px;
-    }
-
-    @media (min-width: $ds) {
-      top: 542px;
-      left: 342px;
     }
   }
 }
@@ -157,27 +151,21 @@
     position: absolute;
     background-image: url("../img/decoration/Ellipse.svg");
     z-index: 1;
+    width: 95px;
+    height: 95px;
+    top: -33px;
+    left: 309px;
 
     @media (max-width: $ds) {
       width: 68px;
       height: 68px;
+      top: -20px;
+      left: 251px;
     }
 
     @media (max-width: $tb) {
       top: -22px;
       left: 231px;
-    }
-
-    @media (min-width: $tb) {
-      top: -22px;
-      left: 242px;
-    }
-
-    @media (min-width: $ds) {
-      width: 95px;
-      height: 95px;
-      top: -33px;
-      left: 309px;
     }
   }
 }
