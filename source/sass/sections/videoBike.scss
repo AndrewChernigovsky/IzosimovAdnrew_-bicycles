@@ -1,17 +1,17 @@
 .videoBike {
   min-height: 300px;
   background: linear-gradient(to bottom, $basicGray9 87.7%, $bodybg 13%);
-  margin-bottom: 147px;
+  margin-bottom: 120px;
 
   @media (max-width: $ds) {
     background: linear-gradient(to bottom, $basicGray9 83%, $bodybg 13%);
-    margin-bottom: 65px;
+    margin-bottom: 47px;
   }
 
   @media (max-width: $tb) {
     background: linear-gradient(to bottom, $basicGray9 88%, $bodybg 13%);
     min-height: 300px;
-    margin-bottom: 70px;
+    margin-bottom: 56px;
   }
 
   &__wrapper {

@@ -1,9 +1,20 @@
 .Mainpage-bike {
   font-size: 10px;
   line-height: 1.15;
+  height: 100%;
 
   &__body {
     margin: 0;
     font-family: "Open Sans", "Arial", sans-serif;
   }
+
+  &__body-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+.main-section {
+  flex: 1;
 }

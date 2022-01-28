@@ -20,7 +20,6 @@
   }
 }
 
-
 .containerMain {
   max-width: $ds + 221px;
   min-width: $sm;
@@ -63,8 +62,4 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.none {
-  display: none;
 }

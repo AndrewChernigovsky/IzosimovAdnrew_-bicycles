@@ -148,8 +148,23 @@
 
 .email-text {
   padding-left: 18px;
+  margin-top: 5px;
+
+  @media (max-width: $ds) {
+    margin-top: 0;
+  }
 }
 
 .phone-text {
   padding-left: 17px;
+
+  margin-top: 0;
+
+  @media (max-width: $ds) {
+    margin-top: -9px;
+  }
+
+  @media (max-width: $tb) {
+    margin-top: 0;
+  }
 }
