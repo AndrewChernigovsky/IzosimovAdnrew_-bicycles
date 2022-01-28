@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Продажа велосипедов, для отдыха, езды на работу, горный фристайл">
   <title>Спортмагазин</title>
-  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -23,7 +23,7 @@
               </svg>
             </a>
           </div>
-          <nav class="main-nav main-nav--closed main-nav--nojs">
+          <nav class="main-nav main-nav--opened main-nav--nojs">
             <div class="main-nav__wrapper">
               <button class="main-nav__toggle" type="button">
                 <span>Открыть меню</span>
@@ -135,10 +135,6 @@
                       img/content/Products-Bike1.webp    1x,
                       img/content/Products-Bike1@2x.webp 2x
                     " />
-                <source type="image/webp" media="(min-width: 768px)" srcset="
-                      img/content/Products-Bike1-tb.webp    1x,
-                      img/content/Products-Bike1-tb@2x.webp 2x
-                    " />
                 <source type="image/webp" media="(min-width: 320px)" srcset="
                       img/content/Products-Bike1-tb.webp    1x,
                       img/content/Products-Bike1-tb@2x.webp 2x
@@ -154,10 +150,6 @@
                 <source type="image/webp" media="(min-width: 1024px)" srcset="
                       img/content/Products-Bike2.webp    1x,
                       img/content/Products-Bike2@2x.webp 2x
-                    " />
-                <source type="image/webp" media="(min-width: 768px)" srcset="
-                      img/content/Products-Bike2-tb.webp    1x,
-                      img/content/Products-Bike2-tb@2x.webp 2x
                     " />
                 <source type="image/webp" media="(min-width: 320px)" srcset="
                       img/content/Products-Bike2-tb.webp    1x,
@@ -175,17 +167,13 @@
                       img/content/Products-Bike3.webp    1x,
                       img/content/Products-Bike3@2x.webp 2x
                     " />
-                <source type="image/webp" media="(min-width: 768px)" srcset="
-                      img/content/Products-Bike3-tb.webp    1x,
-                      img/content/Products-Bike3-tb@2x.webp 2x
-                    " />
                 <source type="image/webp" media="(min-width: 320px)" srcset="
                       img/content/Products-Bike3-tb.webp    1x,
                       img/content/Products-Bike3-tb@2x.webp 2x
                     " />
                 <!-- 1х: 342px; 2x: 684px -->
                 <img class="bikeProduct" src="img/content/Products-Bike3.jpg" alt="для прогулок велосипед" loading="lazy"
-                  width="342" height="503" />
+                  width="342" height="503"/>
               </picture>
               <span class="f-basicSemiBold-Small2 bike-item__subtitle">Детский велосипед</span>
             </div>
@@ -268,7 +256,7 @@
     </footer>
   </div>
 
-  <script src="js/script.js" async></script>
+  <script src="js/script.min.js" async></script>
 </body>
 
 </html>

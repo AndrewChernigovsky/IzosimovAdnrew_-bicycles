@@ -7,6 +7,7 @@
   left: auto;
   transform: translate(0%, 0%);
   text-align: left;
+  z-index: 0;
 
   @media (max-width: $ds) {
     top: 399px;

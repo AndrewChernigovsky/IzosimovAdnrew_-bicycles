@@ -6,10 +6,15 @@ const mainForm = document.getElementById("mainForm"),
 
 let navMain = document.querySelector(".main-nav"),
     navToggle = document.querySelector(".main-nav__toggle"),
-    mainNavOpened = 'main-nav--closed',
-    mainNavClosed = 'main-nav--opened';
+    mainNavClosed = 'main-nav--closed',
+    mainNavOpened = 'main-nav--opened';
 
 navMain.classList.remove("main-nav--nojs");
+
+if(navMain.classList.contains(mainNavOpened)) {
+  navMain.classList.remove(mainNavOpened);
+  navMain.classList.add(mainNavClosed);
+}
 
 navToggle.addEventListener("click", function () {
   if (navMain.classList.contains(mainNavClosed)) {

@@ -40,7 +40,7 @@
   flex: none;
   object-fit: contain;
   min-width: 100%;
-  background-image: url("../img/content/Map.jpg");
+  background: $basicGray1 url("../img/content/Map.jpg");
   min-height: 530px;
 
   @media (max-width: $ds) {

@@ -2,6 +2,7 @@
   min-height: 70px;
   flex-basis: 100%;
   margin-bottom: 219px;
+  z-index: 1;
 
   @media (max-width: $ds) {
     display: block;
