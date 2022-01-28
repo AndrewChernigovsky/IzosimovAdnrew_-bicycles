@@ -1,23 +1,31 @@
 .videoBike {
-  background: linear-gradient(to bottom, $basicGray9 88%, $bodybg 13%);
   min-height: 300px;
-  margin-bottom: 70px;
+  background: linear-gradient(to bottom, $basicGray9 87.7%, $bodybg 13%);
+  margin-bottom: 147px;
+
+  @media (max-width: $ds) {
+    background: linear-gradient(to bottom, $basicGray9 83%, $bodybg 13%);
+    margin-bottom: 65px;
+  }
+
+  @media (max-width: $tb) {
+    background: linear-gradient(to bottom, $basicGray9 88%, $bodybg 13%);
+    min-height: 300px;
+    margin-bottom: 70px;
+  }
 
   &__wrapper {
     text-align: center;
+    padding: 92px 315px 0;
+    margin-bottom: 63px;
 
-    @media (max-width: $tb) {
-      padding: 63px 15px 0;
-    }
-
-    @media (min-width: $tb) {
+    @media (max-width: $ds) {
       padding: 50px 150px 0;
       margin-bottom: 49px;
     }
 
-    @media (min-width: $ds) {
-      padding: 92px 315px 0;
-      margin-bottom: 63px;
+    @media (max-width: $tb) {
+      padding: 63px 15px 0;
     }
 
     p {
@@ -31,13 +39,10 @@
   &__image-wrapper {
     min-width: 100%;
     position: relative;
+    margin-top: -10px;
 
     @media (max-width: $tb) {
       margin-top: 52px;
-    }
-
-    @media (min-width: $tb) {
-      margin-top: -10px;
     }
   }
 
@@ -66,65 +71,56 @@
     }
 
     svg {
-      @media (max-width: $tb) {
-        width: 12px;
-      }
+      width: 15px;
 
-      @media (min-width: $tb) {
+      @media (max-width: $ds) {
         width: 20px;
         height: 26px;
       }
 
-      @media (min-width: $ds) {
-        width: 15px;
+      @media (max-width: $tb) {
+        width: 12px;
       }
     }
 
-    @media (min-width: $tb) {
+    @media (max-width: $ds) {
       width: 91px;
       height: 91px;
     }
 
-    @media (min-width: $ds) {
-      width: 66px;
-      height: 66px;
+    @media (max-width: $tb) {
+      width: 65px;
+      height: 65px;
     }
   }
 
   &__btn-img {
-    @media (min-width: $tb) {
+    height: 27px;
+    margin-left: 7px;
+
+    @media (max-width: $tb) {
       height: 27px;
       margin-left: 7px;
     }
   }
 
   &__title {
-    @media (min-width: $ds) {
-      margin-bottom: 0;
+    margin-bottom: 0;
+
+    @media (max-width: $ds) {
+      margin-bottom: 20px;
     }
   }
 
   &__video {
-    @media (max-width: $tb) {
-      padding: 0 15px;
-    }
+    padding: 0 47px;
 
-    @media (min-width: $tb) {
+    @media (max-width: $ds) {
       padding: 0 132px;
     }
 
-    @media (min-width: $ds) {
-      padding: 0 47px;
+    @media (max-width: $tb) {
+      padding: 0 15px;
     }
-  }
-
-  @media (min-width: $tb) {
-    background: linear-gradient(to bottom, $basicGray9 83%, $bodybg 13%);
-    margin-bottom: 65px;
-  }
-
-  @media (min-width: $ds) {
-    background: linear-gradient(to bottom, $basicGray9 87.7%, $bodybg 13%);
-    margin-bottom: 147px;
   }
 }
