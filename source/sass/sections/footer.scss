@@ -1,26 +1,37 @@
 .mainFooter {
+  padding-bottom: 0;
+
+  @media (max-width: $ds) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $tb) {
+    padding-bottom: 0;
+  }
+
   &__wrapper {
-    @media (min-width: $tb) {
-      max-width: $ds;
-      min-width: $sm;
-      margin: 0 auto;
-      padding: 0 37px;
+    max-width: $ds + 5;
+    min-width: $sm;
+    margin: 0 auto;
+    padding: 0 37px;
+
+    @media (max-width: $tb) {
+      padding: 0;
     }
   }
 
   &__title {
-    @media (max-width: $tb) {
-      margin-bottom: 27px;
-    }
+    font-size: 3rem;
+    letter-spacing: -0.5px;
 
-    @media (min-width: $tb) {
+    @media (max-width: $ds) {
       font-size: 2.4rem;
       margin-bottom: 22px;
     }
 
-    @media (min-width: $ds) {
-      font-size: 3rem;
-      letter-spacing: -0.5px;
+    @media (max-width: $tb) {
+      margin-bottom: 27px;
+      font-size: 1.8rem;
     }
   }
 }
@@ -30,10 +41,11 @@
   object-fit: contain;
   min-width: 100%;
   background-image: url("../img/content/Map.jpg");
+  min-height: 530px;
 
-  iframe {
-    min-width: 100%;
-    min-height: inherit;
+  @media (max-width: $ds) {
+    min-height: 546px;
+    margin-bottom: 17px;
   }
 
   @media (max-width: $tb) {
@@ -41,36 +53,28 @@
     margin-bottom: 34px;
   }
 
-  @media (min-width: $tb) {
-    min-height: 546px;
-    margin-bottom: 23px;
-  }
-
-  @media (min-width: $ds) {
-    min-height: 530px;
+  iframe {
+    min-width: 100%;
+    min-height: inherit;
   }
 }
 
 .mainFooter-heading {
   text-align: center;
+  padding: 0 160px;
+  margin-bottom: 44px;
 
-  @media (min-width: $ds) {
-    padding: 0 160px;
-    margin-bottom: 44px;
+  @media (max-width: $ds) {
+    padding: 0;
+    margin-bottom: 23px;
   }
+
 
   p {
     padding: 0 25px;
     line-height: 1.7;
     font-size: 1.7rem;
-
-    @media (max-width: $ds) {
-      color: $basicGray6;
-    }
-
-    @media (min-width: $ds) {
-      color: $basicGray3;
-    }
+    color: $basicGray3;
   }
 }
 
@@ -78,41 +82,43 @@
   fill: $white;
   stroke: $basicdecor;
   margin-left: -10px;
+  width: 22px;
+  height: 30px;
 }
 
 .email-icon {
+  margin-left: 1px;
+
   @media (max-width: $ds) {
     margin-left: 7px;
   }
 
-  @media (min-width: $ds) {
-    margin-left: 1px;
+  @media (max-width: $tb) {
+    margin-left: 23px;
   }
 }
 
 .contacts {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 245px;
+  min-height: 140px;
   align-items: flex-start;
-  padding-top: 0;
+  padding-top: 36px;
+
+  @media (max-width: $ds) {
+    justify-content: space-between;
+    padding: 0 115px;
+    min-height: 30px;
+  }
 
   @media (max-width: $tb) {
     justify-content: center;
     padding: 0 21%;
+    padding-top: 0;
     min-height: 116px;
-  }
-
-  @media (min-width: $tb) {
-    justify-content: space-between;
-    padding: 0 115px;
-    min-height: 80px;
-  }
-
-  @media (min-width: $ds) {
-    padding: 0 245px;
-    min-height: 140px;
-    align-items: flex-start;
-    padding-top: 16px;
+    margin-top: -6px;
   }
 }
 
@@ -124,28 +130,24 @@
 }
 
 .email-link {
+  margin-bottom: 0;
+  margin-left: -16px;
+
   @media (max-width: $tb) {
     margin-bottom: -26px;
-  }
-
-  @media (min-width: $tb) {
-    margin-bottom: 0;
-    margin-left: -16px;
   }
 }
 
 .phone-link {
+  margin-top: 0;
+
   @media (max-width: $tb) {
     margin-top: -6px;
-  }
-
-  @media (min-width: $tb) {
-    margin-top: 0;
   }
 }
 
 .email-text {
-  padding-left: 12px;
+  padding-left: 18px;
 }
 
 .phone-text {
