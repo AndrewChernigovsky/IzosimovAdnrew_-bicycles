@@ -16,6 +16,23 @@ const sync = require("browser-sync").create();
 
 // Styles
 
+
+const critical = () => {
+  return gulp.src("source/sass/critical.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+
+    .pipe(rename("critical.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -33,6 +50,9 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+exports.critical = critical;
+
 
 // HTML
 
