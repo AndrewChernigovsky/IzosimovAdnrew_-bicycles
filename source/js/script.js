@@ -1,8 +1,10 @@
 "use strict";
 
-const mainForm = document.getElementById("mainForm"),
-  userNameMainForm = document.getElementById("username"),
-  userPhoneMainForm = document.getElementById("phone");
+const mainForm = document.getElementById("mainForm");
+const userNameMainForm = document.getElementById("username");
+const userPhoneMainForm = document.getElementById("phone");
+const starRequiredUsername = document.querySelector('.callToAction-sectionForm__input-starUser');
+const starRequiredPhone = document.querySelector('.callToAction-sectionForm__input-starPhone');
 
 let navMain = document.querySelector(".main-nav"),
     navToggle = document.querySelector(".main-nav__toggle"),
@@ -28,6 +30,7 @@ navToggle.addEventListener("click", function () {
 
 
 mainForm.addEventListener("submit", function (evt) {
+
   if (isValidName(userNameMainForm)) {
     userNameMainForm.classList.add("error")
     evt.preventDefault();
@@ -63,8 +66,16 @@ function isValidName(input) {
 
 userPhoneMainForm.oninput = function () {
   var rep = /[a-zA-ZА-Яа-я]/g;
-  this.value = this.value.replace(rep, "");
+  this.value = this.value.replace(rep, "")
 };
+
+userPhoneMainForm.addEventListener('focus', function() {
+  starRequiredPhone.classList.remove("none");
+})
+
+userNameMainForm.addEventListener('focus', function() {
+  starRequiredUsername.classList.remove("none");
+})
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 

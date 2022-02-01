@@ -1,4 +1,9 @@
-@import "critical.scss";
+@import "helpers/libs/normalize.scss";
+@import "common/variables.scss";
+@import "common/standarts.scss";
+@import "sections/header.scss";
+@import "sections/callToAction-section.scss";
+@import "helpers/fonts/fonts.scss";
 @import "common/typography.scss";
 @import "sections/fact.scss";
 @import "sections/products-bikes.scss";
