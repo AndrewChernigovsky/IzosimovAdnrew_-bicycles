@@ -2,7 +2,7 @@
   padding-bottom: 0;
 
   @media (max-width: $ds) {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   @media (max-width: $tb) {
@@ -99,26 +99,47 @@
 }
 
 .contacts {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 768px;
+  width: max-content;
   justify-content: space-between;
-  padding: 0 245px;
-  min-height: 140px;
   align-items: flex-start;
+  min-height: 140px;
+  word-break: break-all;
   padding-top: 36px;
+  padding-bottom: 30px;
+  margin: 0 auto;
 
   @media (max-width: $ds) {
     justify-content: space-between;
-    padding: 0 115px;
     min-height: 30px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 0;
   }
 
   @media (max-width: $tb) {
     justify-content: center;
-    padding: 0 21%;
     padding-top: 0;
     min-height: 116px;
     margin-top: -6px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .link {
+    &:nth-child(2n) {
+      margin-left: 20px;
+
+      @media (max-width: $tb) {
+        margin-left: 0;
+      }
+    }
+
   }
 }
 
@@ -127,6 +148,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-self: baseline;
+
+  @media (max-width: $ds) {
+
+  }
+
+  @media (max-width: $tb) {
+  }
 }
 
 .email-link {
@@ -134,15 +163,29 @@
   margin-left: -16px;
 
   @media (max-width: $tb) {
-    margin-bottom: -26px;
+    margin-bottom: -10px;
+    margin-left: -4px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
   }
 }
 
 .phone-link {
   margin-top: 0;
+  justify-self: end;
 
   @media (max-width: $tb) {
     margin-top: -6px;
+    text-align: center;
+    width: 81%;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
   }
 }
 
