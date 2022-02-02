@@ -1,7 +1,6 @@
 .main-nav {
   min-height: 70px;
   flex-basis: 100%;
-  margin-bottom: 219px;
   z-index: 1;
 
   @media (max-width: $ds) {
@@ -10,14 +9,14 @@
     min-width: 50px;
     min-height: 50px;
     margin-bottom: 0;
+    top: 0;
   }
 
   @media (max-width: $tb) {
     min-width: auto;
     position: relative;
     min-height: 50px;
-    top: -10px;
-    margin-bottom: 0;
+    margin-bottom: 231px;
     background-color: transparent;
   }
 
@@ -108,7 +107,6 @@
   }
 }
 
-
 .main-nav--closed .main-nav {
   right: -10px;
 }
@@ -184,8 +182,13 @@
 .main-nav--nojs .main-nav__wrapper {
   position: static;
   min-height: 62px;
-  margin-bottom: 220px;
-  margin-left: -95px;
+  margin-left: 0;
+  padding: 10px 32px 0 75px;
+
+  @media (max-width: $ds) {
+    margin-left: -95px;
+    padding: 0;
+  }
 }
 
 .main-nav--nojs .main-nav__item {
@@ -235,6 +238,30 @@
     height: min-content;
     padding-bottom: 20px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, min-content);
+  white-space: pre;
+  padding-bottom: 0;
+
+  @media (max-width: $ds) {
+    grid-template-columns: min-content;
+    margin-left: 0;
+    padding-bottom: 20px;
+    gap: 33px;
+    margin-bottom: 227px;
+  }
+
+
+  @media (max-width: $tb) {
+    margin-bottom: 70px;
   }
 }
 
@@ -305,3 +332,13 @@
     }
   }
 }
+
+.main-nav--nojs .main-nav__link {
+  margin-left: -21px;
+  @media (max-width: $ds) {
+    margin-left: auto;
+  }
+}
+
+
+

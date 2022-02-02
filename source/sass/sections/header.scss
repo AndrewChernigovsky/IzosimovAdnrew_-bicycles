@@ -1,26 +1,10 @@
 .main-header {
-  min-height: 825px;
-  max-height: 1020px;
-  background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
-    top;
-  background-size: cover;
+  min-height: auto;
   margin-bottom: 122px;
 
-  @media (max-width: $ds) {
-    min-height: 340px;
-    background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
-      center;
-    background-size: cover;
-    margin-bottom: 398px;
-  }
 
-  @media (max-width: $tb) {
-    min-height: 390px;
-    background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
-      top;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 415px;
+  @media (max-width: $ds) {
+    margin-bottom: auto;
   }
 
   &__inner {
@@ -28,17 +12,36 @@
     align-items: center;
     min-height: 62px;
     justify-content: space-between;
+    margin-bottom: 50px;
 
     @media (max-width: $ds) {
       min-height: 70px;
+      margin-bottom: -210px;
     }
   }
 
   &__wrapper {
-    margin-bottom: 12px;
+    min-height: 825px;
+    background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
+    top;
+    background-size: cover;
+    margin-bottom: -506px;
 
     @media (max-width: $ds) {
-      margin-bottom: 0;
+      min-height: 340px;
+      background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
+        center;
+      background-size: cover;
+      margin-bottom: 398px;
+    }
+
+    @media (max-width: $tb) {
+      min-height: 390px;
+      background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
+        top;
+      background-size: cover;
+      position: relative;
+      margin-bottom: -316px;
     }
   }
 }

@@ -2,23 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  position: static;
-  top: auto;
-  left: auto;
-  transform: translate(0%, 0%);
-  text-align: left;
-  z-index: 0;
+  position: relative;
 
   @media (max-width: $ds) {
-    transform: translate(0%, 5%);
-    min-width: 58%;
-    text-align: center;
     display: block;
+    margin-top: -624px;
   }
 
   @media (max-width: $tb) {
-    min-width: 70%;
-    transform: translate(0%, 4%);
+    display: block;
+    margin-top: 25px;
   }
 
   &__subtitle {
@@ -168,7 +161,7 @@
     color: $white;
 
     @media (max-width: $ds) {
-      padding: 0 40px;
+      padding: 0 195px;
       margin-bottom: 28px;
       color: $black;
       font-size: 1.8rem;
@@ -183,6 +176,13 @@
   @media (max-width: $ds) {
     flex-basis: 100%;
     padding-right: 0;
+    padding-bottom: 75px;
+  }
+
+  @media (max-width: $tb) {
+    flex-basis: 100%;
+    padding-right: 0;
+    padding-bottom: 75px;
   }
 }
 
