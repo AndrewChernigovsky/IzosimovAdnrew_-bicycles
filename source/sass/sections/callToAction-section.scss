@@ -6,12 +6,12 @@
 
   @media (max-width: $ds) {
     display: block;
-    margin-top: -624px;
+    margin-top: -209px;
+
   }
 
   @media (max-width: $tb) {
-    display: block;
-    margin-top: 25px;
+    margin-top: -624px;
   }
 
   &__subtitle {
@@ -34,6 +34,11 @@
 
     @media (max-width: $ds) {
       display: grid;
+    }
+
+    @media (max-width: $tb) {
+      margin-left: 6px;
+      margin-top: -2px;
     }
 
     input {
@@ -62,6 +67,8 @@
 
       @media (min-width: $tb) {
         min-width: 320px;
+        padding: 4px 22px 0;
+        margin-left: -19px;
       }
 
       @media (min-width: $ds) {
@@ -122,6 +129,7 @@
 
     @media (max-width: $ds) {
       padding-bottom: 0;
+      margin-left: -20px;
     }
 
     @media (max-width: $tb) {
@@ -161,7 +169,8 @@
     color: $white;
 
     @media (max-width: $ds) {
-      padding: 0 195px;
+      padding: 0 210px;
+      margin-left: -17px;
       margin-bottom: 28px;
       color: $black;
       font-size: 1.8rem;
@@ -170,6 +179,7 @@
     @media (max-width: $tb) {
       padding: 0;
       margin-bottom: 20px;
+      margin-left: -10px;
     }
   }
 
@@ -177,6 +187,7 @@
     flex-basis: 100%;
     padding-right: 0;
     padding-bottom: 75px;
+    position: absolute;
   }
 
   @media (max-width: $tb) {
