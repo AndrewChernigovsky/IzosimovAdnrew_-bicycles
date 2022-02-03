@@ -31,21 +31,34 @@ navToggle.addEventListener("click", function () {
 
 mainForm.addEventListener("submit", function (evt) {
 
+  if (userNameMainForm.value == '') {
+    starRequiredUsername.classList.remove("none");
+  }
+
+  if (userPhoneMainForm.value == '') {
+    starRequiredPhone.classList.remove("none");
+  }
+
+
   if (isValidName(userNameMainForm)) {
     userNameMainForm.classList.add("error")
+    starRequiredUsername.classList.remove("none")
     evt.preventDefault();
   } else {
     userNameMainForm.classList.remove("error")
     userNameMainForm.classList.add("success")
+    starRequiredUsername.classList.add("none");
     localStorage.setItem("username", userNameMainForm.value);
   }
 
   if (isValidPhone(userPhoneMainForm)) {
     userPhoneMainForm.classList.add("error")
+    starRequiredPhone.classList.remove("none")
     evt.preventDefault();
   } else {
     userPhoneMainForm.classList.remove("error")
     userPhoneMainForm.classList.add("success")
+    starRequiredPhone.classList.add("none");
     localStorage.setItem("phone", userPhoneMainForm.value);
   }
 
@@ -68,14 +81,6 @@ userPhoneMainForm.oninput = function () {
   var rep = /[a-zA-ZА-Яа-я]/g;
   this.value = this.value.replace(rep, "")
 };
-
-userPhoneMainForm.addEventListener('focus', function() {
-  starRequiredPhone.classList.remove("none");
-})
-
-userNameMainForm.addEventListener('focus', function() {
-  starRequiredUsername.classList.remove("none");
-})
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 
