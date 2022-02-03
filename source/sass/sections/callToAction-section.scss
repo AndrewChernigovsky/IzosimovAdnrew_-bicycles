@@ -6,12 +6,11 @@
 
   @media (max-width: $ds) {
     display: block;
-    margin-top: -209px;
-
+    margin-top: -345px;
   }
 
   @media (max-width: $tb) {
-    margin-top: -624px;
+    margin-top: -736px;
   }
 
   &__subtitle {
@@ -28,6 +27,10 @@
   flex-basis: 38.5%;
   padding-right: 52px;
 
+  @media (min-width: $ds) {
+    margin-top: 322px;
+  }
+
   &__wrapper {
     width: min-content;
     margin: 0 auto;
@@ -37,7 +40,6 @@
     }
 
     @media (max-width: $tb) {
-      margin-left: 6px;
       margin-top: -2px;
     }
 
@@ -68,12 +70,12 @@
       @media (min-width: $tb) {
         min-width: 320px;
         padding: 4px 22px 0;
-        margin-left: -19px;
       }
 
       @media (min-width: $ds) {
         min-width: 327px;
         padding: 6px 28px 0;
+        margin-left: 0;
       }
 
 
@@ -129,11 +131,11 @@
 
     @media (max-width: $ds) {
       padding-bottom: 0;
-      margin-left: -20px;
     }
 
     @media (max-width: $tb) {
       padding-bottom: 7px;
+      margin-left: 0;
     }
 
     &:hover {
@@ -169,8 +171,7 @@
     color: $white;
 
     @media (max-width: $ds) {
-      padding: 0 210px;
-      margin-left: -17px;
+      padding: 0 20px;
       margin-bottom: 28px;
       color: $black;
       font-size: 1.8rem;
@@ -179,7 +180,6 @@
     @media (max-width: $tb) {
       padding: 0;
       margin-bottom: 20px;
-      margin-left: -10px;
     }
   }
 
@@ -188,6 +188,8 @@
     padding-right: 0;
     padding-bottom: 75px;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (max-width: $tb) {

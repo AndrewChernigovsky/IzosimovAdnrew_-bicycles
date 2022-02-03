@@ -1,14 +1,13 @@
 .main-header {
   min-height: auto;
-  margin-bottom: 122px;
-
+  margin-bottom: 628px;
 
   @media (max-width: $ds) {
-    margin-bottom: auto;
+    margin-bottom: 19px;
   }
 
   @media (max-width: $tb) {
-    margin-bottom: 751px;
+    margin-bottom: 688px;
   }
 
   &__inner {
@@ -30,11 +29,11 @@
     top;
     background-size: cover;
     margin-bottom: -506px;
+    z-index: -1;
 
     @media (max-width: $ds) {
       min-height: 340px;
-      background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat
-        center;
+      background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat;
       background-size: cover;
       margin-bottom: 398px;
     }
@@ -46,6 +45,10 @@
       background-size: cover;
       position: relative;
       margin-bottom: -316px;
+    }
+
+    @media (min-width: $ds) {
+      margin-top: -140px;
     }
   }
 }
