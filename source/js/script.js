@@ -28,6 +28,8 @@ navToggle.addEventListener("click", function () {
   }
 });
 
+userNameMainForm.removeAttribute('required')
+userPhoneMainForm.removeAttribute('required')
 
 mainForm.addEventListener("submit", function (evt) {
 
