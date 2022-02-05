@@ -8,12 +8,13 @@ const starRequiredPhone = document.querySelector('.callToAction-sectionForm__inp
 
 let navMain = document.querySelector(".main-nav"),
     navToggle = document.querySelector(".main-nav__toggle"),
+    navLinks = document.querySelectorAll('.main-nav__link'),
     mainNavClosed = 'main-nav--closed',
     mainNavOpened = 'main-nav--opened';
 
 navMain.classList.remove("main-nav--nojs");
 
-if(navMain.classList.contains(mainNavOpened)) {
+if (navMain.classList.contains(mainNavOpened)) {
   navMain.classList.remove(mainNavOpened);
   navMain.classList.add(mainNavClosed);
 }
@@ -26,7 +27,21 @@ navToggle.addEventListener("click", function () {
     navMain.classList.add(mainNavClosed);
     navMain.classList.remove(mainNavOpened);
   }
+
+  if(navMain.classList.contains(mainNavOpened)) {
+    document.getElementsByTagName('body')[0].style.overflow='hidden';
+  }
 });
+
+navLinks.forEach(function(el){
+  el.addEventListener('click', function(){
+    navMain.classList.remove(mainNavOpened)
+    navMain.classList.add(mainNavClosed);
+    document.getElementsByTagName('body')[0].style.overflow='auto';
+  })
+})
+
+
 
 userNameMainForm.removeAttribute('required')
 userPhoneMainForm.removeAttribute('required')

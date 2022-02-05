@@ -229,6 +229,7 @@
   padding-bottom: 20px;
 
   @media (max-width: $ds) {
+    overflow-y:scroll;
     min-width: 320px;
     display: grid;
     gap: 33px;
