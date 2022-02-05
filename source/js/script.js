@@ -1,14 +1,15 @@
 "use strict";
 
-const mainForm = document.getElementById("mainForm");
-const userNameMainForm = document.getElementById("username");
-const userPhoneMainForm = document.getElementById("phone");
+const mainForm = document.getElementById('mainForm');
+const userNameMainForm = document.getElementById('username');
+const userPhoneMainForm = document.getElementById('phone');
 const starRequiredUsername = document.querySelector('.callToAction-sectionForm__input-starUser');
 const starRequiredPhone = document.querySelector('.callToAction-sectionForm__input-starPhone');
 
-let navMain = document.querySelector(".main-nav"),
-    navToggle = document.querySelector(".main-nav__toggle"),
+let navMain = document.querySelector('.main-nav'),
+    navToggle = document.querySelector('.main-nav__toggle'),
     navLinks = document.querySelectorAll('.main-nav__link'),
+    navList = document.querySelector('.main-nav__list'),
     mainNavClosed = 'main-nav--closed',
     mainNavOpened = 'main-nav--opened';
 
@@ -19,7 +20,7 @@ if (navMain.classList.contains(mainNavOpened)) {
   navMain.classList.add(mainNavClosed);
 }
 
-navToggle.addEventListener("click", function () {
+navToggle.addEventListener('click', function () {
   if (navMain.classList.contains(mainNavClosed)) {
     navMain.classList.remove(mainNavClosed);
     navMain.classList.add(mainNavOpened);
@@ -29,14 +30,15 @@ navToggle.addEventListener("click", function () {
   }
 
   if(navMain.classList.contains(mainNavOpened)) {
-    document.getElementsByTagName('body')[0].style.overflow='hidden';
+    document.getElementsByTagName('body')[0].style.overflow='hidden'
+    navList.style.overflowY='scroll';
   }
 });
 
 navLinks.forEach(function(el){
   el.addEventListener('click', function(){
     navMain.classList.remove(mainNavOpened)
-    navMain.classList.add(mainNavClosed);
+    navMain.classList.add(mainNavClosed)
     document.getElementsByTagName('body')[0].style.overflow='auto';
   })
 })
@@ -46,10 +48,10 @@ navLinks.forEach(function(el){
 userNameMainForm.removeAttribute('required')
 userPhoneMainForm.removeAttribute('required')
 
-mainForm.addEventListener("submit", function (evt) {
+mainForm.addEventListener('submit', function (evt) {
 
   if (userNameMainForm.value == '') {
-    starRequiredUsername.classList.remove("none");
+    starRequiredUsername.classList.remove('none');
   }
 
   if (userPhoneMainForm.value == '') {
@@ -58,29 +60,29 @@ mainForm.addEventListener("submit", function (evt) {
 
 
   if (isValidName(userNameMainForm)) {
-    userNameMainForm.classList.add("error")
-    starRequiredUsername.classList.remove("none")
+    userNameMainForm.classList.add('error')
+    starRequiredUsername.classList.remove('none')
     evt.preventDefault();
   } else {
-    userNameMainForm.classList.remove("error")
-    userNameMainForm.classList.add("success")
-    starRequiredUsername.classList.add("none");
-    localStorage.setItem("username", userNameMainForm.value);
+    userNameMainForm.classList.remove('error')
+    userNameMainForm.classList.add('success')
+    starRequiredUsername.classList.add('none');
+    localStorage.setItem('username', userNameMainForm.value);
   }
 
   if (isValidPhone(userPhoneMainForm)) {
-    userPhoneMainForm.classList.add("error")
-    starRequiredPhone.classList.remove("none")
+    userPhoneMainForm.classList.add('error')
+    starRequiredPhone.classList.remove('none')
     evt.preventDefault();
   } else {
-    userPhoneMainForm.classList.remove("error")
-    userPhoneMainForm.classList.add("success")
-    starRequiredPhone.classList.add("none");
-    localStorage.setItem("phone", userPhoneMainForm.value);
+    userPhoneMainForm.classList.remove('error')
+    userPhoneMainForm.classList.add('success')
+    starRequiredPhone.classList.add('none');
+    localStorage.setItem('phone', userPhoneMainForm.value);
   }
 
-  if(userPhoneMainForm.classList.contains("success") && userNameMainForm.classList.contains("success")) {
-    alert("Форма успешно отправлена")
+  if(userPhoneMainForm.classList.contains('success') && userNameMainForm.classList.contains('success')) {
+    alert('Форма успешно отправлена')
   }
 });
 

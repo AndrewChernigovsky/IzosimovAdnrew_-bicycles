@@ -186,7 +186,7 @@
   padding: 10px 32px 0 75px;
 
   @media (max-width: $ds) {
-    margin-left: -92px;
+    margin-left: -93px;
     padding: 0;
   }
 }
@@ -227,17 +227,16 @@
   display: flex;
   box-shadow: none;
   padding-bottom: 20px;
+  overflow-y:visible;
 
   @media (max-width: $ds) {
-    overflow-y:scroll;
     min-width: 320px;
     display: grid;
     gap: 33px;
-    padding-top: 133px;
+    padding-top: 98px;
     grid-auto-rows: min-content;
-    height: 100vh;
+    height: 100%;
     padding-bottom: 20px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 }
 
@@ -254,14 +253,14 @@
   @media (max-width: $ds) {
     grid-template-columns: min-content;
     margin-left: 0;
-    padding-bottom: 20px;
+    padding-bottom: 138px;
     gap: 33px;
-    margin-bottom: 227px;
+    margin-bottom: 0;
   }
 
 
   @media (max-width: $tb) {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 }
 
