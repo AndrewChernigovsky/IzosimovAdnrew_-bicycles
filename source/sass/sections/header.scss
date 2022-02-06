@@ -23,6 +23,10 @@
     }
   }
 
+  &__content-wrapper {
+    margin-bottom: -180px;
+  }
+
   &__wrapper {
     min-height: 825px;
     background: $basicGray4 url("../img/content/Main-bg_Bike.jpg") no-repeat

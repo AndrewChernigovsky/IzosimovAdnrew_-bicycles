@@ -10,6 +10,7 @@ let navMain = document.querySelector('.main-nav'),
     navToggle = document.querySelector('.main-nav__toggle'),
     navLinks = document.querySelectorAll('.main-nav__link'),
     navList = document.querySelector('.main-nav__list'),
+    body = document.getElementsByTagName('body')[0],
     mainNavClosed = 'main-nav--closed',
     mainNavOpened = 'main-nav--opened';
 
@@ -24,14 +25,23 @@ navToggle.addEventListener('click', function () {
   if (navMain.classList.contains(mainNavClosed)) {
     navMain.classList.remove(mainNavClosed);
     navMain.classList.add(mainNavOpened);
+
   } else {
     navMain.classList.add(mainNavClosed);
     navMain.classList.remove(mainNavOpened);
+    navList.style.overflowY='hidden';
   }
 
   if(navMain.classList.contains(mainNavOpened)) {
-    document.getElementsByTagName('body')[0].style.overflow='hidden'
+    body.classList.add('overflow-hidden')
     navList.style.overflowY='scroll';
+  } else {
+    body.classList.remove('overflow-hidden')
+  }
+
+  if(navMain.classList.contains('none')) {
+    body.classList.remove('overflow-hidden')
+    navList.style.overflowY='hidden';
   }
 });
 
@@ -39,10 +49,9 @@ navLinks.forEach(function(el){
   el.addEventListener('click', function(){
     navMain.classList.remove(mainNavOpened)
     navMain.classList.add(mainNavClosed)
-    document.getElementsByTagName('body')[0].style.overflow='auto';
+    body.classList.remove('overflow-hidden')
   })
 })
-
 
 
 userNameMainForm.removeAttribute('required')
